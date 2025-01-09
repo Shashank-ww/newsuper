@@ -1,101 +1,144 @@
+import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import Image from "next/image";
+import heroImages from "@/assets/heroimages"
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { servicesData } from "@/lib/servicesData";
+
+import Callaction from "@/components/Callaction"
+import Testimonials from "@/components/Testimonials";
+import Brands from "@/components/Brands";
+import FloatingBlock from "@/components/FloatingBlock";
+import Poweredby from "@/components/Poweredby";
+import Tabs from "@/components/Tabs";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const currentImageIndex = Math.floor(Math.random() * heroImages.length);
+  const images = [...heroImages];
+
+  return (
+    <main>
+
+    <div className="relative h-[100vh] flex items-center justify-end bg-gradient-to-tr from-white via-blue-50 to-sky-100">
+
+    {images && images[currentImageIndex] && (
+      <Image
+      src={images[currentImageIndex].src}
+      alt={`Slide ${currentImageIndex + 1}`}
+      width={images[currentImageIndex].width}
+      height={images[currentImageIndex].height}
+      className="w-full h-full object-cover absolute inset-0 transition-opacity duration-700 hidden lg:block"
+      />
+    )}
+
+    <MaxWidthWrapper>
+      <div className="relative flex flex-col z-10 text-center md:text-left py-6 max-w-xl mx-auto lg:-mx-20 lg:pl-10">
+        <p>Integrated Media and Tech Studio &mdash;</p>
+        <h1 className="font-bold lg:text-6xl md:text-5xl text-4xl tracking-tight bg-gradient-to-tr from-blue-600 to-sky-400 bg-clip-text text-transparent">
+            Maximize digital excellence in a connected world 
+        </h1>
+        <h2 className="mt-4 font-medium text-accent-foreground">Professional expertise for advanced marketing</h2>
+          <p className="my-4 text-md text-primary">
+            Global center for media agencies, corporate, IT hubs and healthcare groups, looking to outsource autonomous tasks and talent
+          </p>
+          <div className="mt-4 text-center md:text-left">
+            <Link href={"/contact"} passHref>
+            <Button 
+            className="bg-[#0066ff] inline-block md:inline-block lg:block" 
+            variant="default"
+            size="xl"
+            >
+              Get Started <span>&rarr;</span>
+            </Button>
+            </Link>
+          </div>
+            <p className="mt-8 align-text-bottom text-xs place-items-end justify-items-end text-accent-foreground">
+            Managing $1mio ad revenue for 3+ global companies^
+            </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <div id="floatingblock" className="lg:flex hidden">
+          <FloatingBlock/>
+        </div>
+    </MaxWidthWrapper>
+   </div>
+
+   <MaxWidthWrapper>
+    <div className="py-20 w-full flex flex-col items-center justify-center">
+    <h2 className="font-bold mb-6 lg:text-5xl md:text-4xl text-3xl lg:text-secondary-foreground tracking-tight text-center">
+      Transcend media and marketing
+      </h2>
+        <p className="max-w-prose-lg text-center font-medium mb-6">
+         We are shaping the future of digital, with research, creativity and technology</p>
+        <p className="max-w-screen-md text-center mb-6">
+        Our approach is centered on leveraging data-driven consumer insights that drives competitive advantage, to reimagine and reinvent brands for digital-age of the coming
+        </p>
+        <Poweredby/>
     </div>
+   </MaxWidthWrapper>
+
+   <MaxWidthWrapper>
+    <div className="py-20 flex flex-col items-center justify-center">
+      <p className="mx-auto text-sm text-center items-center justify-center font-bold">
+        WHAT WE DO
+      </p>
+      <h2 className="text-sky-500 font-bold mx-auto mb-6 lg:text-5xl md:text-4xl sm:text-3xl text-2xl tracking-tight">
+        Start up, Stack up, Scale up
+      </h2>
+      <p className='mx-auto pb-4 items-center justify-center text-center md:max-w-screen-md'>
+        With over 12 years of extensive experience in media management and technology operations, we excel in providing top-quality content execution and tailored solutions to meet the diverse media and marketing needs. Our expertise ensures unparalleled client-services and result-driven execution
+      </p>
+    </div>
+</MaxWidthWrapper>
+
+    <Tabs/>
+
+   <Brands/>
+
+<MaxWidthWrapper>
+    <div className="py-20 flex flex-col items-center justify-center">
+      <p className="mx-auto text-sm text-center items-center justify-center font-bold">
+        CORE CAPABILITIES
+      </p>
+      <h2 className="text-sky-500 font-bold mx-auto mb-6 lg:text-5xl md:text-4xl sm:text-3xl text-2xl">
+        Discover Our Services
+      </h2>
+      <p className='mx-auto pb-4 items-center justify-center text-center md:max-w-screen-md'>
+      The belief we follow, the work we do, the brands we use, the bread we eat, everything revolves around the decisions we make. Discover how our services can maximize digital excellence in your connected world
+      </p>
+    </div>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 items-center justify-center gap-4 md:p-12">
+      {servicesData.map((service, index) => (
+        <div key={index} className="relative w-full overflow-hidden rounded-md group">
+          {/* Background Image */}
+          <div className="w-full h-[300px] bg-cover bg-top"
+            style={{
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), url(${service.imageUrl})`,
+              backgroundColor: 'lightgray',
+            }}>
+            <h2 className="absolute z-10 w-fit text-md font-semibold m-4 p-2 bg-slate-800 rounded-sm text-primary-foreground">{service.title}</h2>
+            {/* Overlay */}
+            <div className="absolute inset-0 flex flex-col justify-center px-4 py-6 bg-white bg-opacity-100 transition-opacity duration-100 opacity-0 group-hover:opacity-100">
+              {/* Content */}
+              <h3 className="text-sm font-light text-blue-400 mb-2">{service.useCase}</h3>
+              <p className="text-sm">
+                {service.description}
+              </p>
+              <span className="text-sm py-2">
+                <a href={service.link}>See More <span>&#10132;</span></a>
+              </span>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </MaxWidthWrapper>
+
+  <Testimonials/>
+
+  <Callaction/>
+
+    </main>
   );
-}
+} 
