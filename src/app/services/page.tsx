@@ -3,6 +3,7 @@ import Calltoaction from "@/components/Callaction";
 import Faqs from "@/components/Faqs";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { servicesData } from "@/lib/servicesData";
+import ContactForm from "@/components/ContactForm";
 
 const Services = () => {
     return (
@@ -66,6 +67,24 @@ const Services = () => {
       ))}
     </div>
   </MaxWidthWrapper>
+
+  <MaxWidthWrapper>
+<div className="col-start-2 col-span-2 p-6">
+  <div className="py-10 sm:py-16 flex flex-col mx-auto items-center justify-center gap-4">
+        <div className="mx-auto max-w-screen-md text-center">
+          <h1 className="mt-2 lg:text-4xl text-3xl font-bold tracking-tight text-gray-900">
+          Contact us
+          </h1>
+          <p className="mt-6 text-gray-700">
+          Share a project brief or request a full time resource. Enhance customer experiences, streamline work processes, and facilitate data-driven decision-making.
+          </p>
+        </div>
+      </div>
+      <div className="pb-24">
+        <ContactForm/>
+      </div>
+</div>  
+</MaxWidthWrapper>
 
 <Faqs/>
 

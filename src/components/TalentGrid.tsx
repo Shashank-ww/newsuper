@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { profileData, Talents } from '@/data/profiles'; // Ensure this path is correct
 import ProfileCard from '@/components/ProfileCard'; // Ensure this path is correct
-import MaxWidthWrapper from './MaxWidthWrapper';
+import MaxWidthWrapper from '@/components/MaxWidthWrapper';
 
 const TalentGrid = () => {
   const [activeTalent, setActiveTalent] = useState<typeof Talents[number]>(Talents[0]); // Default to the first talent
@@ -19,7 +19,7 @@ const TalentGrid = () => {
       {/* Left Talent Tabs */}
       <div className="space-y-2">
       {Talents.map((Talent) => (
-        <div key={Talent} className="mb-1"> {/* Wrapper div for spacing */}
+        <div key={Talent} className="mb-1 hover:bg-gray-200"> {/* Wrapper div for spacing */}
             <button
             onClick={() => setActiveTalent(Talent)}
             className={`w-full text-left p-4 rounded-s

@@ -64,7 +64,7 @@ const Blog = () => {
                                         <p className="text-gray-600 mb-4">{blog.pubDate}</p>
                                         <Link href={`/blog/${blog.slug}`}>
                                             <span className="text-primary hover:underline">
-                                                Read More &rarr;
+                                                Read Full &rarr;
                                             </span>
                                         </Link>
                                     </div>

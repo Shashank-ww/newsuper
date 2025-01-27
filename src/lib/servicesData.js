@@ -2,24 +2,17 @@
 
 export const servicesData = [
     {
-      title: "DIGITAL TRANSFORMATION",
+      title: "BRAND TRANSFORMATION",
       imageUrl: "/webimgs/services/services-1.jpg",
       useCase: "Use Case:",
       description: "Our data-driven strategies ensure your brand effectively reaches your audience, yielding measurable results.",
       link: "/services/#discover",
     },
     {
-      title: "ENGINEERING R&D",
-      imageUrl: "/webimgs/services/services-2.jpg",
+      title: "CREATIVE DESIGN",
+      imageUrl: "/webimgs/services/services-4.jpg",
       useCase: "Use Case:",
-      description: "Streamline DevOps and agile cloud solutions to provide uninterrupted access to consumer data and applications.",
-      link: "/services/#discover",
-    },
-    {
-      title: "DEVELOPMENT OPS",
-      imageUrl: "/webimgs/services/services-3.jpg",
-      useCase: "Use Case:",
-      description: "Our specialized engineers define, build, and maintain any software - customized to the exact requirements of your company or client.",
+      description: "With high-valued industry personnel crafting beautiful, engaging, and exclusive content that drives engagement along with your business.",
       link: "/services/#discover",
     },
     {
@@ -37,10 +30,17 @@ export const servicesData = [
       link: "/services/#discover",
     },
     {
-      title: "CREATIVE DESIGN",
-      imageUrl: "/webimgs/services/services-4.jpg",
+      title: "DEVELOPMENT OPS",
+      imageUrl: "/webimgs/services/services-3.jpg",
       useCase: "Use Case:",
-      description: "With high-valued industry personnel crafting beautiful, engaging, and exclusive content that drives engagement along with your business.",
+      description: "Our specialized engineers define, build, and maintain any software - customized to the exact requirements of your company or client.",
+      link: "/services/#discover",
+    },
+    {
+      title: "ENGINEERING R&D",
+      imageUrl: "/webimgs/services/services-2.jpg",
+      useCase: "Use Case:",
+      description: "Streamline DevOps and agile cloud solutions to provide uninterrupted access to consumer data and applications.",
       link: "/services/#discover",
     },
   ];

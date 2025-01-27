@@ -18,7 +18,7 @@ import { AiFillCodeSandboxCircle } from "react-icons/ai"
 
 const components: { title: string; href: string; description: string }[] = [
   {
-    title: "Digital Transformation",
+    title: "Brand Transformation",
     href: "/docs/primitives/alert-dialog",
     description:
       "A modal dialog that interrupts the user with important content and expects a response.",
@@ -30,15 +30,16 @@ const components: { title: string; href: string; description: string }[] = [
       "For sighted users to preview content available behind a link.",
   },
   {
-    title: "Engineering R&D",
+    title: "Media Production",
     href: "/docs/primitives/progress",
     description:
       "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
   },
   {
-    title: "Media Production",
-    href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
+    title: "Strategy Consulting",
+    href: "/docs/primitives/tooltip",
+    description:
+      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
   },
   {
     title: "Development Ops",
@@ -47,10 +48,9 @@ const components: { title: string; href: string; description: string }[] = [
       "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
   },
   {
-    title: "Strategy Consulting",
-    href: "/docs/primitives/tooltip",
-    description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+    title: "Engineering R&D",
+    href: "/docs/primitives/scroll-area",
+    description: "Visually or semantically separates content.",
   },
 ]
 

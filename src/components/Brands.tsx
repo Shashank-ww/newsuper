@@ -1,6 +1,8 @@
 import React from 'react'
 import MaxWidthWrapper from '@/components/MaxWidthWrapper'
 import Image from 'next/image'
+import Link from 'next/link'
+import { Button } from './ui/button'
 
 const logos = [
   { src: '/webimgs/teamlogos/Godrej.svg', alt: 'Godrej', width: 120, height: 24 },
@@ -20,11 +22,16 @@ function Brands() {
         <div className='mx-auto grid md:grid-cols-2'>
           <div className='lg:sticky top-24 self-start flex flex-col items-center justify-start md:pr-8'>
             <div className="max-w-md items-center justify-end">
-              <p className='text-blue-500 font-bold'>Top Clienteles</p>
-              <h1 className='md:text-4xl sm:text-3xl text-2xl font-bold pb-6 tracking-tight'>Premiere choice of agency</h1>
+              <p className='text-blue-500 font-bold'>TOP CLIENTELES</p>
+              <h1 className='md:text-4xl sm:text-3xl text-2xl font-bold pb-6 tracking-tight'>Premiere hub</h1>
               <p>
-              The esteemed brands we have had the privilege to collaborate with, representd diverse industries and global reach, these companies reflect the trust and excellence we cultivated through our services. <br/> <br/> A story of innovation, partnership, and success, reinforcing our commitment to delivering impactful results for our clients.
+              We have had the privilege to collaborate, represent diverse clients with global reach, reflecting the trust and excellence we cultivated through our services. <br/> <br/> Built upon innovation, partnership, and success, reinforcing our commitment to delivering impactful results.
               </p>
+              <Link href='/explore#work'>
+              <Button variant={'default'} className='mt-12'>
+                See All work
+              </Button>
+              </Link>
             </div>
           </div>
           <div className='lg:w-[500px] md:w-[auto] h-[auto] shadow-2xl rounded-md bg-cover bg-center mx-auto'>
@@ -38,7 +45,6 @@ function Brands() {
                       alt={logo.alt}
                       width={logo.width}  
                       height={logo.height}  
-                      layout='intrinsic'
                     />
                   </div>
                 ))}

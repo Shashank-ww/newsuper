@@ -1,14 +1,12 @@
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
+import ContactForm from "./ContactForm";
 
 const links = [
     { name: 'About us', href: '/about' },
     { name: 'Our values', href: '/about' },
-    { name: 'Internship program', href: '#' },
     { name: 'Open roles', href: '#' },
   ]
   const stats = [
-    { name: 'Remote Locations', value: '12' },
-    { name: 'Full-time colleagues', value: '30+' },
     { name: 'Working Timezones', value: 'Flexible' },
     { name: 'Medical Insurance', value: 'Benefits' },
   ]
@@ -20,14 +18,15 @@ const links = [
       <MaxWidthWrapper>
       <div className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl" aria-hidden="true">
       </div>
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="grid grid-cols-1 md:grid-cols-2">
+      <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">Partner with us</h2>
           <p className="mt-6 leading-8 text-gray-300">
             Find related media or tech services to work on or get hired as an individual for long-term work contracts, both at the convenience of your own location. 
           </p>
         </div>
-        <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
+        <div className="mx-auto my-10 max-w-2xl lg:mx-0 lg:max-w-none">
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
             {links.map((link) => (
               <a key={link.name} href={link.href}>
@@ -44,6 +43,10 @@ const links = [
             ))}
           </dl>
         </div>
+      </div>
+      <div className="text-white">
+        <ContactForm/>
+      </div>
       </div>
       </MaxWidthWrapper>
     </div>

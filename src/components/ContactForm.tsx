@@ -52,7 +52,7 @@ export const ContactForm = () => {
           if (data.error) {
             setError(data.error);
           } else {
-            setSuccess("Thanks! We will get back soon.");
+            setSuccess("Thanks for your interest! We will respond soon.");
             form.reset(); // Reset the form on successful submission
           }
         })
@@ -74,7 +74,7 @@ export const ContactForm = () => {
 
   return (
     <MaxWidthWrapper>
-      <div className="w-full max-w-screen-lg items-center justify-center">
+      <div className="w-full max-w-screen-lg px-4 items-center justify-center">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
             <div className="space-y-2">
@@ -158,7 +158,7 @@ export const ContactForm = () => {
                         {...field}
                         id="industry"
                         disabled={isPending}
-                        className="w-full border border-gray-300 rounded-md p-2 text-gray-500 text-sm"
+                        className="w-full bg-inherit border border-gray-300 rounded-md p-2 text-gray-500 text-sm"
                       >
                         <option value="">Select Industry</option>
                         {sectorData.map((service) => (
@@ -189,7 +189,7 @@ export const ContactForm = () => {
                         placeholder="Share project details, proposals, talent profile, job description, web links, etc."
                         rows={3} // Adjusted to be smaller
                         disabled={isPending}
-                        className="w-full border border-gray-300 rounded-md p-2 text-sm"
+                        className="w-full bg-inherit border border-gray-300 rounded-md p-2 text-sm"
                       />
                     </FormControl>
                     <FormMessage>
@@ -210,7 +210,8 @@ export const ContactForm = () => {
               <Button
                 disabled={isPending || isLoading}
                 type="submit"
-                className="w-full lg:w-auto"
+                className="w-full lg:w-auto text-secondary-foreground"
+                variant={"outline"}
               >
                 {(isPending || isLoading) ? (
                   <>
@@ -226,8 +227,8 @@ export const ContactForm = () => {
               <Button
                 disabled={isPending}
                 type="button"
-                className="w-full lg:w-auto"
-                variant={"outline"}
+                className="w-full text-inherit lg:w-auto"
+                variant={"ghost"}
                 onClick={() => form.reset()}
               >
                 Clear All

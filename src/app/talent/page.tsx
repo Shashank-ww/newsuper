@@ -1,9 +1,7 @@
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { Button } from "@/components/ui/button";
-import Faqs from "@/components/Faqs";
 import Workwithus from "@/components/Workwithus";
 import Image from "next/image";
-import Calltoaction from "@/components/Callaction";
 import TalentGrid from "@/components/TalentGrid";
 
 const Talent = () => {
@@ -28,58 +26,60 @@ const Talent = () => {
         </div>
 
         <MaxWidthWrapper>
-      <div className="py-16 sm:py-24 flex flex-col mx-auto items-center justify-center gap-4">
-        <div className="mx-auto max-w-screen-md text-center">
-          <h2 className="text-base font-bold leading-7 text-blue-600">FIND FAST, ASSIGN FASTER</h2>
-          <h1 className="mt-2 lg:text-4xl text-3xl font-bold tracking-tight text-gray-900">
-            Unmatched services, experienced professionals
-          </h1>
-          <p className="mt-6 text-gray-700">
-          We offer scalable and flexible media execution and tech support to tackle in-house challenges such as resource constraints, seasonal workload fluctuations, and a shortage of specialized expertise in media agencies, corporate, IT hubs and healthcare groups.
-          </p>
-        </div>
-      </div>
-  </MaxWidthWrapper>
+          <div className="py-16 sm:py-24 flex flex-col mx-auto items-center justify-center gap-4">
+            <div className="mx-auto max-w-screen-md text-center">
+              <h2 className="text-base font-bold leading-7 text-blue-600">TALENT SUPERSQAD</h2>
+              <h1 className="mt-2 lg:text-4xl text-3xl font-bold tracking-tight text-gray-900">
+              Custom squad with niche skillset
+              </h1>
+              <p className="mt-6 text-gray-700">
+              We offer scalable and flexible media and tech squads who can tackle in-house challenges such as resource constraints, seasonal workload fluctuations, and a shortage of specialized expertise in media agencies, corporate, IT hubs and healthcare groups.
+              </p>
+            </div>
+          </div>
+        </MaxWidthWrapper>
+
+        <TalentGrid/>
 
 {/* Top Highlights */}
 
-<MaxWidthWrapper>
-      <div className="max-w-400 text-center items-center justify-center lg:flex flex-row">
-        <div className="my-6 p-4 sm:text-center sm:justify-center">
-          <div>
-          <h3 className="font-thin lg:text-7xl md:text-6xl text-5xl lg:text-right my-4">100%</h3>
-          <p className="lg:text-right font-bold">FTE Resources</p>
-          <hr className="my-6"></hr>
-          </div>
-          <div>
-          <h3 className="font-thin lg:text-7xl md:text-6xl text-5xl lg:text-right my-4">+6H</h3>
-          <p className="lg:text-right font-bold">Overlapped Timezone</p>
-          </div>
-        </div>
+        <MaxWidthWrapper>
+              <div className="max-w-400 text-center items-center justify-center lg:flex flex-row">
+                <div className="my-6 p-4 sm:text-center sm:justify-center">
+                  <div>
+                  <h3 className="font-thin lg:text-7xl md:text-6xl text-5xl lg:text-right my-4">100%</h3>
+                  <p className="lg:text-right font-bold">FTE Resources</p>
+                  <hr className="my-6"></hr>
+                  </div>
+                  <div>
+                  <h3 className="font-thin lg:text-7xl md:text-6xl text-5xl lg:text-right my-4">+6H</h3>
+                  <p className="lg:text-right font-bold">Overlapped Timezone</p>
+                  </div>
+                </div>
 
-        <div className="hidden md:flex items-center justify-center px-4">
-        <Image
-          src="/webimgs/talent/talent5.png"
-          alt="About Pic"
-          width="500"
-          height={300}
-          objectFit="cover"
-        />
-        </div>
-        
-        <div className="my-6 p-4">
-          <div>
-          <h3 className="font-thin lg:text-7xl text-5xl lg:text-left my-4">1.5+</h3>
-          <p className="font-bold lg:text-left">Industry YoE</p>
-          <hr className="my-6"></hr>
-          </div>
-          <div>
-          <h3 className="font-thin lg:text-7xl text-5xl lg:text-left my-4">^12</h3>
-          <p className="font-bold lg:text-left">Category Experts</p>
-          </div>
-        </div>
-      </div>
-     </MaxWidthWrapper>
+                <div className="hidden md:flex items-center justify-center px-4">
+                <Image
+                  src="/webimgs/talent/talent5.png"
+                  alt="About Pic"
+                  width="500"
+                  height={300}
+                  objectFit="cover"
+                />
+                </div>
+                
+                <div className="my-6 p-4">
+                  <div>
+                  <h3 className="font-thin lg:text-7xl text-5xl lg:text-left my-4">1.5+</h3>
+                  <p className="font-bold lg:text-left">Industry YoE</p>
+                  <hr className="my-6"></hr>
+                  </div>
+                  <div>
+                  <h3 className="font-thin lg:text-7xl text-5xl lg:text-left my-4">^12</h3>
+                  <p className="font-bold lg:text-left">Category Experts</p>
+                  </div>
+                </div>
+              </div>
+        </MaxWidthWrapper>
 
      <MaxWidthWrapper>
       <div className="flex flex-col md:flex-row lg:pb-24 sm:pb-16 px-8 items-center justify-evenly ">
@@ -121,15 +121,13 @@ const Talent = () => {
     </div>
 </MaxWidthWrapper>
 
-<TalentGrid/>
-
 {/* Talent Propositions */}
 
 <MaxWidthWrapper>
   <div className="max-w-screen mx-auto m-4 md:py-12 flex flex-col lg:flex-row lg:flex">
     <div className="w-full lg:w-2/3 p-12 flex items-center justify-center">
       <div>
-        <h1 className="font-bold lg:text-3xl md:text-2xl text-xl sm:text-lg">Global Work Culture</h1>
+        <h1 className="font-bold lg:text-3xl md:text-2xl text-xl sm:text-lg">Global Workforce</h1>
         <p className="py-4">Our core philosophy is people over process. This is rooted in our culture making it instrumental to our success. It has helped us attract and retain exceptional colleagues, making work here much satisfying.</p>
         <Button variant="outline" className="my-4" size="default">Get Started &#10132;</Button>
       </div>
@@ -161,7 +159,7 @@ const Talent = () => {
     <div className="w-6 shadow-lg bg-blue-500"></div>
     <div className="w-full lg:w-2/3 p-12 flex items-center justify-center">
       <div>
-        <h1 className="font-bold lg:text-3xl md:text-2xl text-xl sm:text-lg">Freedom and Responsibility</h1>
+        <h1 className="font-bold lg:text-3xl md:text-2xl text-xl sm:text-lg">Freedom and Equality</h1>
         <p className="py-4">People share equal responsibility when they have the courage to face what is next. We build their tomorrow alongside our businesses, ensuring mutual respect for both clients and employees.</p>
         <Button variant="outline" className="my-4" size="default">Get Started &#10132;</Button>
       </div>
@@ -169,20 +167,7 @@ const Talent = () => {
   </div>
 </MaxWidthWrapper>
 
- 
-  {/* <Image
-          src="/webimgs/girlpic.png"
-          alt="Feature Pic"
-          width={500}
-          height={800}
-        /> */}
-
-
 <Workwithus/>
-
-<Faqs/>
-
-<Calltoaction/>
 
 
         </>

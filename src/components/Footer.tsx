@@ -35,7 +35,7 @@ const Footer = () => {
             </div>
             
             <p className='py-4 w-[80%] text-xs'>
-            Outsource effortless media management and tech ops with our talented and ready to work resources.
+            Outsource effortless media production and tech ops with our exclusive services and supersqads.
             </p>
            <div className='flex justify-start py-4 gap-4 md:w[50% my-4]'>
                 <SlSocialGoogle size={20} />

@@ -114,11 +114,6 @@ const Tabs = () => {
                 {activeContent.title}
               </h1>
               <p className="py-2 leading-7">{activeContent.description}</p>
-              <a href='/explore#work'>
-              <Button variant={'outline'} className='mt-4'>
-                See work
-              </Button>
-              </a>
             </div>
           </div>
         )}

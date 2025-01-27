@@ -32,7 +32,7 @@ const Explore = () => {
         <div className="mx-auto max-w-screen-lg text-center">
           <h2 className="text-base font-bold leading-7 text-blue-600">EXPLORE OUR WORK</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Scale marketing and technology solutions
+            Creative marketing and adtech solutions
           </p>
           <p className="mt-6 text-gray-700 max-w-screen-sm mx-auto">
           Leverage our expertise in media management and technology operations, with unmatched quality content and tailored solutions to meet diverse media execution and marketing needs, driving success and growth for your brand.
