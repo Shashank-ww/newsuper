@@ -61,7 +61,7 @@ const Footer = () => {
                     <Link href="/talent">Top Talent</Link>
                     </li>
                 <li className='py-2 text-xs hover:underline'>
-                    <a href={"./#services"}>Investors</a></li>
+                    <Link href={"./about#investors"}>Investors</Link></li>
                 <li className='py-2 text-xs'>Resources</li>
             </ul>
         </div>

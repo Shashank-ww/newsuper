@@ -25,7 +25,7 @@ function Brands() {
               <p className='text-blue-500 font-bold'>TOP CLIENTELES</p>
               <h1 className='md:text-4xl sm:text-3xl text-2xl font-bold pb-6 tracking-tight'>Premiere hub</h1>
               <p>
-              We have had the privilege to collaborate, represent diverse clients with global reach, reflecting the trust and excellence we cultivated through our services. <br/> <br/> Built upon innovation, partnership, and success, reinforcing our commitment to delivering impactful results.
+              We have had the privilege to collaborate, represent diverse clients with global reach, reflecting the trust and excellence we cultivated through our services. <br/> <br/> Built upon innovation and partnership, we are reinforcing our commitment in delivering impactful results.
               </p>
               <Link href='/explore#work'>
               <Button variant={'default'} className='mt-12'>

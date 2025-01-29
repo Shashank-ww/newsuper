@@ -1,7 +1,7 @@
 import React from 'react'
 import MaxWidthWrapper from '@/components/MaxWidthWrapper'
 import Image from 'next/image'
-import { Button } from './ui/button'
+import { Button } from '@/components/ui/button'
 
 const partners = [
   {
@@ -39,9 +39,9 @@ const partners = [
 export default function Investors() {
   return (
     <MaxWidthWrapper>
-      <div className="py-16 sm:px-12 lg:px-16 text-center mx-auto">
+      <div id='investors' className="py-16 sm:px-12 lg:px-16 text-center mx-auto">
         <p className='text-base font-bold leading-7 text-blue-600'>
-          INDIVIDUAL INVESTORS
+          OUR INVESTORS
         </p>
         <h2 className="mt-2 lg:text-4xl text-3xl font-bold tracking-tight text-gray-900">
           Partners who shaped our world
@@ -57,7 +57,7 @@ export default function Investors() {
                 <Image 
                   src={partner.image} 
                   alt={partner.name} 
-                  className="h-36 w-36 object-cover object-top mb-4 rounded-full transition-all duration-800 ease-in group-hover:rounded-sm group-hover:grayscale-0 grayscale"
+                  className="h-36 w-36 object-cover object-top mb-4 rounded-full transition-all duration-800 ease-in-out group-hover:rounded-sm group-hover:grayscale-0 grayscale"
                   style={{ objectPosition: '50% 40%' }}
                   width={400}
                   height={400} 

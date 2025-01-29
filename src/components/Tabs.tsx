@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import MaxWidthWrapper from './MaxWidthWrapper';
-import { Button } from '@/components/ui/button';
 import Image from 'next/image'; // Assuming Next.js is used
 
 const TabsCard = [

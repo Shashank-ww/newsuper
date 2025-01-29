@@ -46,8 +46,8 @@ const Explore = () => {
 <MaxWidthWrapper>
 <div className="bg-white py-12 sm:py-16">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <h2 className="text-center text-lg font-semibold leading-8 text-gray-900">
-          Trusted by the world&apos;s most innovative teams around the world
+        <h2 className="text-center text-lg font-bold leading-7 text-gray-900">
+          Trusted by the world&apos;s most innovative teams
         </h2>
         <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-fit sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
           <Image
@@ -99,8 +99,8 @@ const Explore = () => {
       <h1 className='mt-2 text-3xl items-right justify-end font-bold tracking-tight text-gray-900 sm:text-4xl py-6'>
         Global Outsourcing
         </h1>
-      <p className="text-md font-light">
-      We are driven by the desire to uplift everyone we touch. Empathy and Agility are the key pillars, enabling us to adapt quickly in response to changing market dynamics but doing so in the most humane way possible whilst leveraging the power of emerging technologies.
+      <p className="text-md">
+      We are driven by the desire to uplift everyone we connect with. Empathy and agility are our key pillars that enable us to adapt quickly in response to changing market dynamics but doing so in the most effective way possible, leveraging the power of global convergence.
         </p>
         <div className='flex justify-center md:justify-end'>      
       <button className='bg-blue-500 w-[200px] text-white hover:bg-slate-600 font-medium my-12 md:mx-0 py-3'>
@@ -144,8 +144,8 @@ const Explore = () => {
       <h1 className='mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl py-6'>
         Sub-Contract Studio
         </h1>
-      <p className="text-md font-light">
-      Leverage our expertise with dedicated resources dedicated to streamline operations and achieve business goals faster. <br/> <br/> Register now to access our dedicated resources and take your projects to the next level with unmatched proficiency and dedication.
+      <p className="text-md">
+      Our expertise with dedicated resources specifically dedicated to streamline executable operations to achieve business goals faster. <br/> <br/> Register now to access our dedicated resources and take your projects to the next level with unmatched proficiency and dedication.
         </p>      
       <button className='bg-blue-500 w-[200px] text-white hover:bg-slate-600 font-medium my-12 mx-auto md:mx-0 py-3'>Get Started</button>
     </div>
@@ -160,8 +160,8 @@ const Explore = () => {
         <h1 className='mt-2 text-3xl items-right justify-end font-bold tracking-tight text-gray-900 sm:text-4xl py-6'>
           Business Consulting
         </h1>
-        <p className="text-md font-light">
-          Accelerate your business success with expert consultants providing strategies and insights to drive growth and optimize business performance. Get access to cutting-edge solutions designed to elevate your business to new heights. <br/> <br/> Register now to tap into our expertise and unlock your full potential with our comprehensive growth consultation services.
+        <p className="text-md">
+          Accelerate your business success with our expert consultants providing strategic insights to drive growth and optimize business performance. Access cutting-edge workflows designed to elevate into new heights. <br/> <br/> Register now to tap into our expertise and unlock your full potential with our comprehensive growth consultation services.
         </p>
         <div className='flex justify-center md:justify-end'>
           <button className='bg-blue-500 w-[200px] text-white hover:bg-slate-600 font-medium my-12 py-3'>

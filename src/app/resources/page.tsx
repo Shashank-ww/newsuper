@@ -1,6 +1,7 @@
 "use client";
 
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
+import Blog from "../blog/page";
 
 const Resources = () => {
     return (
@@ -23,30 +24,31 @@ const Resources = () => {
                 </MaxWidthWrapper>
                 </div>
 
+<Blog/>
 
         <MaxWidthWrapper>
         <div className="h-[auto] md:grid md:grid-cols-3 py-12 sm:py-16 gap-4 items-start justify-start sm:flex sm:flex-col sm:gap-8 sm:mx-0 sm:max-w-none sm:grid-cols-1">
-    <div className="w-full text-xl flex items-start justify-start">
-        <div className="p-4 text-xl font-bold">
-            Contact us
-            <p className='font-light text-base py-4'>Reach out to us for solutions, coffee, or say Hi!</p>
+        <div className="w-full text-xl flex items-start justify-start">
+            <div className="p-4 text-xl font-bold">
+                Contact us
+                <p className='font-light text-base py-4'>Reach out to us for solutions, coffee, or say Hi!</p>
+            </div>
+        </div>
+        <div className="text-xl py-2 flex flex-col gap-8">
+            <div className="p-4 rounded-lg bg-zinc-100">
+                <div className="flex items-start pb-2 text-base font-semibold">New Business</div>
+                <div className="flex items-start text-base font-semibold text-blue-500">business@gmail.com</div>
+                <div className="flex items-start text-sm">+91 96 252 14 305</div>
+            </div>
+        </div>
+        <div className="text-xl py-2 flex flex-col gap-8">
+            <div className="p-4 rounded-lg bg-zinc-100">
+                <div className="flex items-start pb-2 text-base font-semibold">Collaborate</div>
+                <div className="flex items-start text-base font-semibold text-blue-500">collaborate@gmail.com</div>
+                <div className="flex items-start text-sm">+91 96 252 14 305</div>
+            </div>
         </div>
     </div>
-    <div className="text-xl py-2 flex flex-col gap-8">
-        <div className="p-4 rounded-lg bg-zinc-100">
-            <div className="flex items-start pb-2 text-base font-semibold">New Business</div>
-            <div className="flex items-start text-base font-semibold text-blue-500">business@gmail.com</div>
-            <div className="flex items-start text-sm">+91 96 252 14 305</div>
-        </div>
-    </div>
-    <div className="text-xl py-2 flex flex-col gap-8">
-        <div className="p-4 rounded-lg bg-zinc-100">
-            <div className="flex items-start pb-2 text-base font-semibold">Collaborate</div>
-            <div className="flex items-start text-base font-semibold text-blue-500">collaborate@gmail.com</div>
-            <div className="flex items-start text-sm">+91 96 252 14 305</div>
-        </div>
-    </div>
-</div>
 
 
 

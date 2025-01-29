@@ -34,7 +34,12 @@ const TalentGrid = () => {
             <div className="border-b border-slate-100/90 w-full"></div> {/* Border separator */}
         </div>
         ))}
-        <Button variant={'link'}>Submit Application</Button>
+        <p className="text-xs p-4">
+          If you are an applicant looking to get featured, please {' '}
+          <Button variant="link" className="inline">
+            Submit Application
+          </Button>
+        </p>
       </div>
 
       {/* Right Profile Cards */}
