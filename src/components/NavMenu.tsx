@@ -19,38 +19,38 @@ import { AiFillCodeSandboxCircle } from "react-icons/ai"
 const components: { title: string; href: string; description: string }[] = [
   {
     title: "Brand Transformation",
-    href: "/docs/primitives/alert-dialog",
+    href: "/services/digital#brand-transformation",
     description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
+      "Revitalize your brand to connect with modern audiences and stand out in the digital landscape.",
   },
   {
     title: "Creative Design",
-    href: "/docs/primitives/hover-card",
+    href: "/services/digital#creative-design",
     description:
-      "For sighted users to preview content available behind a link.",
+      "Elevate your visuals with cutting-edge design strategies that resonate with your target audience.",
   },
   {
     title: "Media Production",
-    href: "/docs/primitives/progress",
+    href: "/services/digital#media-production",
     description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+      "Produce impactful media content that tells your brand story with clarity and creativity.",
   },
   {
     title: "Strategy Consulting",
-    href: "/docs/primitives/tooltip",
+    href: "/services/digital#strategy-consulting",
     description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+      "Leverage expert insights to drive your business strategy and navigate complex challenges.",
   },
   {
     title: "Development Ops",
-    href: "/docs/primitives/tabs",
+    href: "/services/digital#development-ops",
     description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+      "Streamline development processes with robust operational strategies to ensure efficiency.",
   },
   {
     title: "Engineering R&D",
-    href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
+    href: "/services/digital#engineering-rnd",
+    description: "Innovate with advanced research and development strategies to push your business ahead.",
   },
 ]
 

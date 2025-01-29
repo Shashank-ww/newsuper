@@ -1,6 +1,5 @@
 import { Suspense } from "react";
 import { notFound } from "next/navigation";
-import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import RSSParser from "rss-parser";
 
 interface BlogItem {
@@ -72,7 +71,6 @@ export default async function BlogPost({ params }: PageProps) {
 function BlogContent({ blog }: { blog: BlogItem }) {
   return (
     <main className="relative flex flex-col min-h-screen">
-      <MaxWidthWrapper>
         <article className="py-20">
           <h1 className="text-4xl font-bold mb-4">{blog.title}</h1>
           <p className="text-gray-600 mb-8">{blog.pubDate}</p>
@@ -85,7 +83,6 @@ function BlogContent({ blog }: { blog: BlogItem }) {
             <p>No content available</p>
           )}
         </article>
-      </MaxWidthWrapper>
     </main>
   );
 }
@@ -93,11 +90,9 @@ function BlogContent({ blog }: { blog: BlogItem }) {
 function Loading() {
   return (
     <main className="relative flex flex-col min-h-screen">
-      <MaxWidthWrapper>
         <div className="py-20">
-          <h1 className="text-4xl font-bold">Loading...</h1>
+          <h1 className="text-4xl font-bold">Loading content...</h1>
         </div>
-      </MaxWidthWrapper>
     </main>
   );
 }

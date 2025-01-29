@@ -63,7 +63,9 @@ const Footer = () => {
                 <li className='py-2 text-xs hover:underline'>
                     <Link href={"./about#investors"}>Investors</Link>
                     </li>
-                <li className='py-2 text-xs'>Explore</li>
+                <li className='py-2 text-xs hover:underline'>
+                    <Link href={"./explore"}>Explore</Link>
+                    </li>
             </ul>
         </div>
         <div className='flex-1'>
