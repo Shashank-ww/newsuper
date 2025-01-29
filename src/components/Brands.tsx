@@ -10,7 +10,7 @@ const logos = [
   { src: '/webimgs/teamlogos/David.svg', alt: 'Davidp', width: 140, height: 90 },
   { src: '/webimgs/teamlogos/Oxfam.svg', alt: 'Oxfam', width: 120, height: 60 },
   { src: '/webimgs/teamlogos/MaxIndia.svg', alt: 'Max', width: 160, height: 80 },
-  { src: '/webimgs/teamlogos/giz.svg', alt: 'GIZ', width: 160, height: 60 },
+  { src: '/webimgs/teamlogos/GIZ.svg', alt: 'GIZ', width: 160, height: 60 },
   { src: '/webimgs/teamlogos/Greenpeace.svg', alt: 'Greenpeace', width: 160, height: 80 },
   { src: '/webimgs/teamlogos/lg-logo.svg', alt: 'Omron', width: 110, height: 55 },
 ]

@@ -61,17 +61,17 @@ const Footer = () => {
                     <Link href="/talent">Top Talent</Link>
                     </li>
                 <li className='py-2 text-xs hover:underline'>
-                    <Link href={"./about#investors"}>Investors</Link></li>
-                <li className='py-2 text-xs'>Resources</li>
+                    <Link href={"./about#investors"}>Investors</Link>
+                    </li>
+                <li className='py-2 text-xs'>Explore</li>
             </ul>
         </div>
         <div className='flex-1'>
             <h6 className='font-medium text-base border-b border-1 border-gray-700 py-2 mb-2'>Clients</h6>
             <ul className='text-muted-foreground'>
-                <li className='py-2 text-xs'>Get Consultation</li>
-                <li className='py-2 text-xs'>Hire Contractor</li>
-                <li className='py-2 text-xs'>Buy Services</li>
-                <li className='py-2 text-xs'>Enterprise</li>
+                <li className='py-2 text-xs hover:underline'><Link href={"./services#contactus"}>Get Consultation</Link></li>
+                <li className='py-2 text-xs hover:underline'><Link href={"./services#contactus"}>Hire Contractors</Link></li>
+                <li className='py-2 text-xs hover:underline'><Link href={"./contact"}>Buy Services</Link></li>
             </ul>
         </div>
         </div>
@@ -83,16 +83,16 @@ const Footer = () => {
                 <li className='py-2 text-xs block hover:underline'>
                 <Link href="./blog">Blogs</Link>
                 </li>
-                <li className='py-2 text-xs'>Partnerships</li>
-                <li className='py-2 text-xs'>Media Centre</li>
+                <li className='py-2 text-xs hover:underline'><Link href={"./talent#workwithus"}>Parternships</Link></li>
+                <li className='py-2 text-xs hover:underline'><Link href={"./services#contactus"}>Media Centre</Link></li>
             </ul>
         </div>
         <div className='flex-1'>
             <h6 className='font-medium text-base border-b border-1 border-gray-700 py-2 mb-2'>Support</h6>
             <ul className='text-muted-foreground'>
-                <li className='py-2 text-xs'>Raise Issue</li>
-                <li className='py-2 text-xs'>Contact</li>
-                <li className='py-2 text-xs'>Career</li>
+                <li className='py-2 text-xs hover:underline'><Link href={"./services#contactus"}>Raise Issue</Link></li>
+                <li className='py-2 text-xs hover:underline'><Link href={"./contact"}>Contact</Link></li>
+                <li className='py-2 text-xs hover:underline'><Link href={"./talent#careers"}>Careers</Link></li>
                 </ul>
         </div>
         </div>

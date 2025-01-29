@@ -2,9 +2,9 @@ import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import ContactForm from "./ContactForm";
 
 const links = [
-    { name: 'About us', href: '/about' },
-    { name: 'Our values', href: '/about' },
-    { name: 'Open roles', href: '#' },
+    { name: 'About us', href: './about' },
+    { name: 'Our values', href: './about#values' },
+    { name: 'Open roles', href: './talent' },
   ]
   const stats = [
     { name: 'Working Timezones', value: 'Flexible' },
@@ -14,7 +14,7 @@ const links = [
 
   const Workwithus = () => {
     return (
-      <div className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+      <div id="workwithus" className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
       <MaxWidthWrapper>
       <div className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl" aria-hidden="true">
       </div>

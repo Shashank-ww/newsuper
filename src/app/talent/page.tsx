@@ -124,7 +124,7 @@ const Talent = () => {
 {/* Talent Propositions */}
 
 <MaxWidthWrapper>
-  <div className="max-w-screen mx-auto m-4 md:py-12 flex flex-col lg:flex-row lg:flex">
+  <div id="careers" className="max-w-screen mx-auto m-4 md:py-12 flex flex-col lg:flex-row lg:flex">
     <div className="w-full lg:w-2/3 p-12 flex items-center justify-center">
       <div>
         <h1 className="font-bold lg:text-3xl md:text-2xl text-xl sm:text-lg">Global Workforce</h1>

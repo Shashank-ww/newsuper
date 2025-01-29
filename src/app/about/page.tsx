@@ -58,7 +58,7 @@ const About = () => {
 
 
 <MaxWidthWrapper>
-      <div className="py-16 sm:py-24 flex flex-col mx-auto items-center justify-center gap-4">
+      <div id="values" className="py-16 sm:py-24 flex flex-col mx-auto items-center justify-center gap-4">
         <div className="mx-auto max-w-screen-md text-center">
           <h2 className="text-base font-bold leading-7 text-blue-600">OUR VALUES</h2>
           <p className="mt-2 lg:text-4xl text-3xl font-bold tracking-tight text-gray-900">
@@ -271,9 +271,7 @@ const About = () => {
         <div className="relative isolate overflow-hidden px-6 pt-16 shadow-2xl rounded-md sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0 bg-gradient-to-bl from-slate-100 to-zinc-200">
           <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
             <h2 className="text-3xl font-bold tracking-tight text-primary-background sm:text-4xl">
-              Outsource Process.
-              <br />
-              Expert Resources.
+              Outsource business processes and tech ops
             </h2>
             <p className="mt-6 text-primary-background">
             With commitment to excellence and creative innovation, as your strategic partner, we provide solutions and opportunities for growth and success. 
