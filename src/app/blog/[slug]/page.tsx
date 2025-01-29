@@ -16,7 +16,7 @@ async function getBlogPost(slug: string): Promise<BlogItem | null> {
 
   try {
     const response = await fetch(`${apiUrl}/api/rss-proxy`, {
-      cache: "force-cache",
+      cache: "no-store",
     });
 
     if (!response.ok) {

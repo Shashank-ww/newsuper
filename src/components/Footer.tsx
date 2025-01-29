@@ -83,7 +83,7 @@ const Footer = () => {
             <h6 className='font-medium text-base border-b border-1 border-gray-700 py-2 mb-2'>Resources</h6>
             <ul className='text-muted-foreground'>
                 <li className='py-2 text-xs block hover:underline'>
-                <Link href="./blog">Blogs</Link>
+                <a href="/blog">Blogs</a>
                 </li>
                 <li className='py-2 text-xs hover:underline'><Link href={"./talent#workwithus"}>Parternships</Link></li>
                 <li className='py-2 text-xs hover:underline'><Link href={"./services#contactus"}>Media Centre</Link></li>

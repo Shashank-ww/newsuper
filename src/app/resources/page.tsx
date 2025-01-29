@@ -24,7 +24,9 @@ const Resources = () => {
                 </MaxWidthWrapper>
                 </div>
 
+<MaxWidthWrapper>
 <Blog/>
+</MaxWidthWrapper>
 
         <MaxWidthWrapper>
         <div className="h-[auto] md:grid md:grid-cols-3 py-12 sm:py-16 gap-4 items-start justify-start sm:flex sm:flex-col sm:gap-8 sm:mx-0 sm:max-w-none sm:grid-cols-1">
