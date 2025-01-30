@@ -68,7 +68,7 @@ const Digital = () => {
             ever-changing landscape with confidence.
           </p>
           <div
-            className="w-auto h-[500px] shadow-inner bg-cover bg-center relative group m-4"
+            className="w-auto h-[500px] shadow-inner bg-cover bg-center relative group my-6 rounded-md"
             style={{
               backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), url(/webimgs/services/services-3.jpg)`,
               backgroundColor: "lightgray",
@@ -125,6 +125,8 @@ const Digital = () => {
             </li>
           </ul>
         </nav>
+
+        <hr/>
 
         {/* Service Sections with Anchors */}
         <div className="space-y-10">

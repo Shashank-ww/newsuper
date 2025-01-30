@@ -7,7 +7,7 @@ import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Superstackstudios - Independent Capability Agency",
+  title: "Superstackstudios - Independent Media Activation Agency",
   description: "Developed by Werbex Inc.",
 };
 

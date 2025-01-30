@@ -34,7 +34,7 @@ export default function Home() {
 
     <MaxWidthWrapper>
       <div className="relative flex flex-col z-10 text-center md:text-left py-6 max-w-xl mx-auto lg:-mx-20 lg:pl-10">
-        <p>Advertising Media and Tech Studio &mdash;</p>
+        <p>Independent Media and Tech Studio &mdash;</p>
         <h1 className="font-bold lg:text-6xl md:text-5xl text-4xl tracking-tight bg-gradient-to-tr from-blue-600 to-sky-400 bg-clip-text text-transparent">
             Maximize digital excellence in a connected world 
         </h1>
@@ -54,7 +54,7 @@ export default function Home() {
             </Link>
           </div>
             <p className="mt-8 align-text-bottom text-xs place-items-end justify-items-end text-accent-foreground">
-            Managing $1mio ad revenue for 3+ global companies^
+            Managed $1mio ad revenue for 3+ global companies^
             </p>
         </div>
         <div id="floatingblock" className="lg:flex hidden">
@@ -66,7 +66,7 @@ export default function Home() {
    <MaxWidthWrapper>
     <div className="py-20 w-full flex flex-col items-center justify-center">
     <h2 className="font-bold mb-6 lg:text-5xl md:text-4xl text-3xl lg:text-secondary-foreground tracking-tight text-center">
-      Integrated media marketing agency
+      Integrated media activation agency
       </h2>
         <p className="max-w-prose-lg text-center font-medium mb-6">
          We are shaping the future of digital, with research, creativity and technology</p>
