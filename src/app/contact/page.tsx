@@ -10,7 +10,7 @@ const Contact = () => {
         <>
         <div className="w-full relative items-center justify-center" style={{ 
                     backgroundImage: `url("/webimgs/mastheads/side4.png")`, 
-                    backgroundSize: "100%", 
+                    backgroundSize: "cover", 
                     backgroundPosition: "center 30%",
                     backgroundColor: "#fff5ee",
                 }}>

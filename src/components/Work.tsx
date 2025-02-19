@@ -178,7 +178,27 @@ const workItems: WorkItem[] = [
     },
     { 
         id: 17, 
-        image: '/webimgs/work/bsbanner.jpg', 
+        image: '/webimgs/work/planet.jpg', 
+        unoptimized: false,
+        description: 'Godrej festive campaign for Diwali on Instagram', 
+        likes: 12, 
+        link: '#', 
+        width: 500, 
+        height: 500 // Horizontal
+    },
+    { 
+        id: 18, 
+        image: '/webimgs/work/wwf4.png', 
+        unoptimized: false,
+        description: 'Godrej festive campaign for Diwali on Instagram', 
+        likes: 12, 
+        link: '#', 
+        width: 600, 
+        height: 600 // Horizontal
+    },
+    { 
+        id: 19, 
+        image: '/webimgs/work/enking.jpg', 
         unoptimized: false,
         description: 'Godrej festive campaign for Diwali on Instagram', 
         likes: 12, 
@@ -218,7 +238,7 @@ const Work = () => {
  
     return (
         <MaxWidthWrapper>
-            <div id='work' className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 auto-rows-[200px] py-16">
+            <div id='work' className="grid grid-cols-auto sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 auto-rows-[200px] grid-auto-flow-dense py-16">
                 {workItems.map((item, index) => (
                     <div
                         key={item.id}

@@ -21,7 +21,7 @@ function Brands() {
       <div className='w-full bg-secondary-background py-24 sm:py-16'>
         <div className='mx-auto grid md:grid-cols-2'>
           <div className='lg:sticky top-24 self-start flex flex-col items-center justify-start md:pr-8'>
-            <div className="max-w-md items-center justify-end">
+            <div className="max-w-md text-center lg:text-left items-center justify-end my-6 px-4">
               <p className='text-blue-500 font-bold'>TOP CLIENTELES</p>
               <h1 className='md:text-4xl sm:text-3xl text-2xl font-bold pb-6 tracking-tight'>Premiere hub</h1>
               <p>

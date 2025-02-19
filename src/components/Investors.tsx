@@ -57,7 +57,7 @@ export default function Investors() {
                 <Image 
                   src={partner.image} 
                   alt={partner.name} 
-                  className="h-36 w-36 object-cover object-top mb-4 rounded-full transition-all duration-800 ease-in-out group-hover:rounded-sm group-hover:grayscale-0 grayscale"
+                  className="h-36 w-36 object-cover object-top mb-4 rounded-full transition-all duration-50 ease-in-out group-hover:rounded-sm group-hover:grayscale-0 grayscale"
                   style={{ objectPosition: '50% 40%' }}
                   width={400}
                   height={400} 

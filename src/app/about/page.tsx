@@ -20,7 +20,7 @@ const About = () => {
         }}></div>
 
         {/* About Us */}
-        <div className="lg:sticky absolute top-64 px-2.5 flex items-center justify-center cursor-default">
+        <div className="lg:sticky absolute top-64 px-2.5 flex items-center justify-center cursor-default w-full">
         <div className="pb-4 flex flex-col z-1 text-center max-w-4xl mx-auto">
           <p className="underline underline-offset-4 font-bold">ABOUT US</p>
           <h1 className="tracking-tight font-bold py-4 lg:text-6xl md:text-5xl text-4xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-sky-400 hover:from-amber-500 hover:to-yellow-500 transition-colors duration-700">The Supersqad <span className="font-normal">story</span>
