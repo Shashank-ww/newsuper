@@ -23,7 +23,7 @@ function Brands() {
           <div className='lg:sticky top-24 self-start flex flex-col items-center justify-start md:pr-8'>
             <div className="max-w-md text-center lg:text-left items-center justify-end my-6 px-4">
               <p className='text-blue-500 font-bold'>TOP CLIENTELES</p>
-              <h1 className='md:text-4xl sm:text-3xl text-2xl font-bold pb-6 tracking-tight'>Premiere hub</h1>
+              <h1 className='lg:text-5xl md:text-4xl sm:text-3xl text-2xl font-bold pb-6 tracking-tight'>Premiere hub</h1>
               <p>
               We have had the privilege to collaborate, represent diverse clients with global reach, reflecting the trust and excellence we cultivated through our services. <br/> <br/> Built upon innovation and partnership, we are reinforcing our commitment in delivering impactful results.
               </p>

@@ -112,7 +112,28 @@ export const brandTransformationCaseStudy = () => (
         {/* Collage Image */}
         <div className="my-12">
         <Image 
-          src="/webimgs/services/casestudy/brandboard.png"
+          src="/webimgs/services/casestudy/1.png"
+          width={1200}
+          height={2048} 
+          alt="Brand Transformation Collage" 
+          className="w-full h-auto my-12 rounded-lg shadow-lg"
+        />
+                <Image 
+          src="/webimgs/services/casestudy/3.png"
+          width={1200}
+          height={2048} 
+          alt="Brand Transformation Collage" 
+          className="w-full h-auto my-12 rounded-lg shadow-lg"
+        />
+                <Image 
+          src="/webimgs/services/casestudy/7.png"
+          width={1200}
+          height={2048} 
+          alt="Brand Transformation Collage" 
+          className="w-full h-auto my-12 rounded-lg shadow-lg"
+        />
+                <Image 
+          src="/webimgs/services/casestudy/8.png"
           width={1200}
           height={2048} 
           alt="Brand Transformation Collage" 
@@ -211,7 +232,7 @@ export const brandTransformationCaseStudy = () => (
         {/* Collage Image */}
         <div className="my-12">
         <Image 
-          src="/webimgs/services/casestudy/tech.gif"
+          src="/webimgs/services/casestudy/rnd-engineering-1.jpg"
           width={1200}
           height={2048} 
           alt="Brand Transformation Collage" 

@@ -8,19 +8,19 @@ const features = [
     icon: RectangleGroupIcon,
   },
   {
-    name: 'Dedicated teams',
+    name: 'Dedicated Teams',
     description:
       'With a deep understanding of your objectives and unwavering commitment to excellence, our teams seamlessly integrate into your workflow, ensuring optimal results and smooth collaboration.',
     icon: UserGroupIcon,
   },
   {
-    name: 'Instant resolution',
+    name: 'Outsource Projects',
     description:
       'Our dedicated team is always on standby to swiftly address any concerns, ensuring minimal disruptions and maximum satisfaction for our clients.',
     icon: BoltIcon,
   },
   {
-    name: 'Realtime reporting',
+    name: 'Market Trends',
     description:
       'From monitoring key metrics to identifying trends as they happen, with real-time reporting you can make informed decision and stay ahead of competition',
     icon: PresentationChartLineIcon,
@@ -32,8 +32,8 @@ const Features = () => {
     <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-screen-lg lg:text-center">
-          <h2 className="text-base font-bold leading-7 text-blue-400">AGENCY MODEL</h2>
-          <p className="mt-2 lg:text-4xl text-3xl font-bold tracking-tight text-gray-900">
+          <h2 className="text-base font-bold leading-7 text-blue-500">INTEGRATED AGENCY APPROACH</h2>
+          <p className="mt-2 lg:text-5xl md:text-4xl text-3xl font-bold tracking-tight text-gray-900">
           Full-service Global Capability Center
           </p>
           <p className="mt-6 text-gray-700">

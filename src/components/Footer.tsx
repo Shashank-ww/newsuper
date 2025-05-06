@@ -107,7 +107,7 @@ const Footer = () => {
         <li className='p-1'>Cookie Settings</li>
     </ul>
     <p className='py-4 px-2 mx-auto text-xs text-muted-foreground'>
-        <span>&copy; 2025 Supersqad.com&#8482;</span> {'\n'} All Rights Reserved. 
+        <span>&copy; 2024 - {new Date().getFullYear()} Supersqad.com&#8482;</span> {'\n'} All Rights Reserved. 
         Developed by Werbex Inc.
     </p>
 </div>

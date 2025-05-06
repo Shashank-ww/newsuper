@@ -11,7 +11,7 @@ const Callaction = () => {
                 Find Talent
             </h3>
             <p className="text-sm mb-8 max-w-sm">
-             Discover and connect with top professionals who can bring your projects to life with their expertise and skills.
+             Discover and connect with top professionals and bring your projects to life with their expertise and skills.
             </p>
             <a href="/talent">
             <Button variant={"outline"} size={"lg"}> 
@@ -24,7 +24,7 @@ const Callaction = () => {
                 Find Job
             </h3>
             <p className="text-sm mb-8 max-w-sm">
-             Explore work opportunities that match your skills and career aspirations. Start your journey toward the perfect job today!
+             Explore work opportunities that match your skills and career aspirations. Start your journey today!
             </p>
             <a href="https://forms.gle/sihRooqtQVBCxcZ1A" target="_blank" rel="noopener noreferrer">
             <Button className="text-black" variant="outline" size="lg"> 

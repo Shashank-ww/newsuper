@@ -34,9 +34,9 @@ const TalentGrid = () => {
             <div className="border-b border-slate-100/90 w-full"></div> {/* Border separator */}
         </div>
         ))}
-        <p className="text-xs p-4">
-          If you are an applicant looking to get featured, please {' '}
-          <Button variant="link" className="inline">
+        <p className="text-xs p-4 text-gray-600">
+          <span className='font-semibold'>Please Note: </span>If you are an applicant looking to get featured, please {' '}
+          <Button variant="link" className="inline text-xs -p-4">
             Submit Application
           </Button>
         </p>

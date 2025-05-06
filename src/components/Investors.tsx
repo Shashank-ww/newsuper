@@ -10,7 +10,7 @@ const partners = [
     image: '/webimgs/avatars/investors/rahul.jpg',
   },
   {
-    name: 'Johnathan Wong',
+    name: 'Somsak Wong',
     title: 'Partner, Venture Pathways',
     image: '/webimgs/avatars/investors/johnathanwong.jpg',
   },
@@ -25,14 +25,14 @@ const partners = [
     image: '/webimgs/avatars/investors/suresh.jpg',
   },
   {
-    name: 'Dr. Nithya Ramachandran',
-    title: 'General Practitioner, Community Health Center',
-    image: '/webimgs/avatars/investors/nithya.jpg',
+    name: 'Dr Naresh Solanki',
+    title: 'Surgical Oncologist, Immunocell Center',
+    image: '/webimgs/avatars/investors/drnaresh.jpg',
   },
   {
-    name: 'Erik Thompson',
+    name: 'Yousuf Baig',
     title: 'Chief Investment Officer, Horizon Capital',
-    image: '/webimgs/avatars/investors/erik.jpg',
+    image: '/webimgs/avatars/investors/YusufBaig.jpg',
   }
 ];
 
@@ -57,7 +57,7 @@ export default function Investors() {
                 <Image 
                   src={partner.image} 
                   alt={partner.name} 
-                  className="h-36 w-36 object-cover object-top mb-4 rounded-full transition-all duration-50 ease-in-out group-hover:rounded-sm group-hover:grayscale-0 grayscale"
+                  className="h-36 w-36 object-cover object-top mb-4 rounded-full transition-all duration-100 ease-in-out group-hover:grayscale-0 grayscale"
                   style={{ objectPosition: '50% 40%' }}
                   width={400}
                   height={400} 

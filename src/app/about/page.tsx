@@ -4,6 +4,7 @@ import Stats from "@/components/Stats";
 import Testimonials from "@/components/Testimonials";
 import Link from "next/link";
 import Investors from "@/components/Investors";
+import Callaction from "@/components/Callaction";
 
 const About = () => {
     return (
@@ -266,38 +267,7 @@ const About = () => {
 
 {/* Call to action */}
 
-        <MaxWidthWrapper>
-        <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-16 lg:px-4">
-        <div className="relative isolate overflow-hidden px-6 pt-16 shadow-2xl rounded-md sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0 bg-gradient-to-bl from-slate-100 to-zinc-200">
-          <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
-            <h2 className="text-3xl font-bold tracking-tight text-primary-background sm:text-4xl">
-              Outsource business processes and tech ops
-            </h2>
-            <p className="mt-6 text-primary-background">
-            With commitment to excellence and creative innovation, as your strategic partner, we provide solutions and opportunities for growth and success. 
-            </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
-              <a href="./explore"
-                className="rounded-md bg-blue-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
-                Know More
-              </a>
-              <a href="./services" className="text-sm font-semibold leading-6 text-primary-background">
-                Find Services <span aria-hidden="true">→</span>
-              </a>
-            </div>
-          </div>
-          <div className="relative mt-16 h-80 lg:mt-8">
-          <div className="absolute left-0 top-0 w-[500px] h-[500px] rounded-md bg-white/5 ring-1 ring-white/10"
-            style={{
-              backgroundImage: "url('https://images.unsplash.com/photo-1576267423429-569309b31e84?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3')",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}>
-            </div>
-            </div>
-          </div>
-          </div>
-          </MaxWidthWrapper>
+<Callaction/>
 
         </main>
     );

@@ -33,7 +33,7 @@ const Services = () => {
       <p className="mx-auto text-sm text-center items-center justify-center font-bold">
         CORE CAPABILITIES
       </p>
-      <h2 className="text-sky-500 font-bold mx-auto mb-6 lg:text-5xl md:text-4xl sm:text-3xl text-2xl">
+      <h2 className="text-gray-900 font-bold tracking-tight mx-auto mb-6 lg:text-5xl md:text-4xl sm:text-3xl text-2xl">
         Discover Our Services
       </h2>
       <p className='mx-auto pb-4 items-center justify-center text-center md:max-w-screen-md'>

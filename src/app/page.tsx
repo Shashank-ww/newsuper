@@ -11,6 +11,7 @@ import Brands from "@/components/Brands";
 import FloatingBlock from "@/components/FloatingBlock";
 import Poweredby from "@/components/Poweredby";
 import Tabs from "@/components/Tabs";
+import Features from "@/components/Features";
 
 export default function Home() {
 
@@ -54,7 +55,7 @@ export default function Home() {
             </Link>
           </div>
             <p className="mt-8 align-text-bottom text-xs place-items-end justify-items-end text-accent-foreground">
-            Managed $1mio ad revenue for 3+ global companies^
+            Managed over $1mio accounts' for 3+ global companies^
             </p>
         </div>
         <div id="floatingblock" className="lg:flex hidden">
@@ -65,68 +66,24 @@ export default function Home() {
 
    <MaxWidthWrapper>
     <div className="py-20 w-full flex flex-col items-center justify-center">
-    <h2 className="font-bold mb-6 lg:text-5xl md:text-4xl text-3xl lg:text-secondary-foreground tracking-tight text-center">
-      Integrated media activation agency
+    <h2 className="font-bold mb-6 lg:text-5xl md:text-4xl text-3xl lg:text-secondary-foreground tracking-tight text-center text-gray-900">
+      Integrated media management agency
       </h2>
         <p className="max-w-prose-lg text-center font-medium mb-6">
          We are shaping the future of digital, with research, creativity and technology</p>
         <p className="max-w-screen-md text-center mb-6">
-        Our approach is centered on leveraging data-driven consumer insights that drives competitive advantage, to reimagine and reinvent brands for digital-age of the coming
+        Our approach is centered on leveraging data-driven consumer insights that drives competitive advantage, to reimagine and reinvent creative brands for digital-age of the coming
         </p>
         <Poweredby/>
     </div>
    </MaxWidthWrapper>
 
-   <div className="bg-zinc-800">
-  <MaxWidthWrapper>
-  <div className="mx-auto max-w-screen-lg px-6 lg:px-8">
-  <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 py-16 sm:py-24">
-  <div className="lg:pl-8 lg:pt-4">
-        <div className="lg:max-w-lg">
-          <h2 className="text-base font-bold leading-7 text-blue-400">WHO WE ARE</h2>
-          <h1 className="mt-2 text-3xl font-bold tracking-tight text-primary-foreground sm:text-3xl">Partner in delivering digital solutions to maximize presence</h1>
-          <p className="mt-6 leading-7 text-white">A go-to hub for businesses undergoing digital transformation, asset production or technology integration into all aspects of executable operations, client experiences, optimized processes, and data-driven decision-making.</p>
-          <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-white lg:max-w-none">
-            <div className="relative pl-12">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-9 absolute left-0 top-1 text-inherit">
-                <path fillRule="evenodd" d="M2.25 6a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V6Zm3.97.97a.75.75 0 0 1 1.06 0l2.25 2.25a.75.75 0 0 1 0 1.06l-2.25 2.25a.75.75 0 0 1-1.06-1.06l1.72-1.72-1.72-1.72a.75.75 0 0 1 0-1.06Zm4.28 4.28a.75.75 0 0 0 0 1.5h3a.75.75 0 0 0 0-1.5h-3Z" clipRule="evenodd" />
-              </svg>
-              <dt className="inline-flex font-semibold text-white">
-                Media and Tech Studio
-              </dt>
-              <dd className="inline-block font-light">Streamline service-ops, media production or tailored marketing solutions by experts.</dd>
-            </div>
-            <div className="relative pl-12">
-              <dt className="inline-flex font-semibold text-white">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-9 absolute left-0 top-1 text-inherit">
-                  <path d="M15.75 8.25a.75.75 0 0 1 .75.75c0 1.12-.492 2.126-1.27 2.812a.75.75 0 1 1-.992-1.124A2.243 2.243 0 0 0 15 9a.75.75 0 0 1 .75-.75Z" />
-                  <path fillRule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM4.575 15.6a8.25 8.25 0 0 0 9.348 4.425 1.966 1.966 0 0 0-1.84-1.275.983.983 0 0 1-.97-.822l-.073-.437c-.094-.565.25-1.11.8-1.267l.99-.282c.427-.123.783-.418.982-.816l.036-.073a1.453 1.453 0 0 1 2.328-.377L16.5 15h.628a2.25 2.25 0 0 1 1.983 1.186 8.25 8.25 0 0 0-6.345-12.4c.044.262.18.503.389.676l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 0 1-1.161.886l-.143.048a1.107 1.107 0 0 0-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 0 1-1.652.928l-.679-.906a1.125 1.125 0 0 0-1.906.172L4.575 15.6Z" clipRule="evenodd" />
-                </svg>
-                Talented Offshore Experts
-              </dt>
-              <dd className="inline-block font-light">Maximize productivity with Full-Time Equivalent (FTE) resources dedicated to projects, while seamlessly integrating with your existing teams.</dd>
-            </div>
-          </dl>
-        </div>
-      </div>
-    <div className="w-full lg:h-auto bg-cover bg-center" 
-      style={{ 
-      backgroundImage: "url('https://images.unsplash.com/photo-1663645446482-8c4d17787448?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3')", 
-      backgroundSize: "cover", 
-      backgroundPosition: "center" 
-      }}>
-      </div>
-    </div>
-</div>
-  </MaxWidthWrapper>
-</div>
-
    <MaxWidthWrapper>
     <div className="py-20 flex flex-col items-center justify-center">
-      <p className="mx-auto text-sm text-center items-center justify-center font-bold">
+      <p className="mx-auto text-sky-500 text-sm text-center items-center justify-center font-bold">
         WHAT WE DO
       </p>
-      <h2 className="text-sky-500 font-bold mx-auto mb-6 lg:text-5xl md:text-4xl sm:text-3xl text-2xl tracking-tight">
+      <h2 className="mx-auto mb-6 lg:text-5xl md:text-4xl sm:text-3xl text-2xl font-bold tracking-tight text-gray-900 ">
         Start up, Stack up, Scale up
       </h2>
       <p className='mx-auto pb-4 items-center justify-center text-center md:max-w-screen-md'>
@@ -139,12 +96,14 @@ export default function Home() {
 
    <Brands/>
 
+   <Features/>
+
 <MaxWidthWrapper>
     <div className="py-20 flex flex-col items-center justify-center">
-      <p className="mx-auto text-sm text-center items-center justify-center font-bold">
+      <p className="mx-auto text-sky-500 text-sm text-center items-center justify-center font-bold">
         CORE CAPABILITIES
       </p>
-      <h2 className="text-sky-500 font-bold mx-auto mb-6 lg:text-5xl md:text-4xl sm:text-3xl text-2xl">
+      <h2 className="font-bold mx-auto mb-6 lg:text-5xl md:text-4xl sm:text-3xl text-2xl">
         Discover Our Services
       </h2>
       <p className='mx-auto pb-4 items-center justify-center text-center md:max-w-screen-md'>
@@ -180,8 +139,38 @@ export default function Home() {
   </MaxWidthWrapper>
 
   <Testimonials/>
-
-  <Callaction/>
+  <MaxWidthWrapper>
+        <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-16 lg:px-4">
+        <div className="relative isolate overflow-hidden px-6 pt-16 shadow-2xl rounded-md sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0 bg-gradient-to-bl from-slate-100 to-zinc-200">
+          <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
+            <h2 className="text-3xl font-bold tracking-tight text-primary-background sm:text-4xl">
+              Outsource business processes and tech ops
+            </h2>
+            <p className="mt-6 text-primary-background">
+            With commitment to excellence and creative innovation, as your strategic partner, we provide solutions and opportunities for growth and success. 
+            </p>
+            <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
+              <a href="./explore"
+                className="bg-blue-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+                Know More
+              </a>
+              <a href="./services" className="text-sm font-semibold leading-6 text-primary-background hover:underline underline-offset-2">
+                Find Services <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+          <div className="relative mt-16 h-80 lg:mt-8">
+          <div className="absolute left-0 top-0 w-[500px] h-[500px] rounded-md bg-white/5 ring-1 ring-white/10"
+            style={{
+              backgroundImage: "url('https://images.unsplash.com/photo-1576267423429-569309b31e84?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}>
+            </div>
+            </div>
+          </div>
+          </div>
+          </MaxWidthWrapper>
 
     </main>
   );

@@ -9,7 +9,7 @@ const TabsCard = [
     id: 1,
     label: 'Global Outsourcing',
     content: {
-      tabname: 'GLOBAL OUTSOURCING',
+      tabname: 'MEDIA OUTSOURCING',
       title: 'Outsource business processes',
       text: 'Outsource tech or media processes, like DevOps, Management, or Video Production.',
       image: '/webimgs/explore/process.png', // Replace with your actual image path
@@ -25,7 +25,7 @@ const TabsCard = [
     id: 2,
     label: 'Sub-Contract Studio',
     content: {
-      tabname: 'SUB-CONTRACT STUDIO',
+      tabname: 'PRODUCTION STUDIO',
       title: 'Get dedicated contractors',
       text: 'Get dedicated contractors for autonomous projects and regular tasks.',
       image: '/webimgs/explore/offshore.png', // Replace with your actual image path
@@ -41,7 +41,7 @@ const TabsCard = [
     id: 3,
     label: 'Business Consulting',
     content: {
-      tabname: 'BUSINESS CONSULTING',
+      tabname: 'TECH & BUSINESS CONSULTING',
       title: 'Get started with your project',
       text: 'Get started with a brief of your project on media and marketing strategies.',
       image: '/webimgs/explore/consulting.png', // Replace with your actual image path
@@ -66,7 +66,7 @@ const Tabs = () => {
 
   return (
     <MaxWidthWrapper>
-      <div id='tabs' className="w-full mx-auto py-12">
+      <div id='tabs' className="w-full mx-auto pb-12">
         {/* Tab Navigation */}
         <div className="max-w-[1240px] mx-auto grid md:grid-cols-3 gap-6 pb-11 border-b-2 border-gray-300">
           {TabsCard.map((tab) => (
