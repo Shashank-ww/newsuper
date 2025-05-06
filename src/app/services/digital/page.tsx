@@ -75,7 +75,7 @@ const Digital = () => {
           </a>
         </li>
         <li>
-          <a href="#media-production" onClick={(e) => {e.preventDefault; e.currentTarget.focus();}} className="flex items-center gap-2 px-4 py-2 rounded-md transition-all duration-200 
+          <a href="#media-production" className="flex items-center gap-2 px-4 py-2 rounded-md transition-all duration-200 
              text-sm font-medium text-gray-700 hover:bg-blue-100 focus:bg-blue-200 focus:outline-none 
              focus:ring-2 focus:ring-blue-400 focus:text-blue-700">
             <Film className="w-5 h-5 mr-2" />

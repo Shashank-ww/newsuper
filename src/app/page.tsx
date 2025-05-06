@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { servicesData } from "@/lib/servicesData";
 
-import Callaction from "@/components/Callaction"
 import Testimonials from "@/components/Testimonials";
 import Brands from "@/components/Brands";
 import FloatingBlock from "@/components/FloatingBlock";
@@ -55,7 +54,7 @@ export default function Home() {
             </Link>
           </div>
             <p className="mt-8 align-text-bottom text-xs place-items-end justify-items-end text-accent-foreground">
-            Managed over $1mio accounts' for 3+ global companies^
+            Managed over $1mio accounts&apos; for 3+ global companies<sup>*</sup>
             </p>
         </div>
         <div id="floatingblock" className="lg:flex hidden">
