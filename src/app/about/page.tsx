@@ -10,14 +10,15 @@ const About = () => {
     return (
       <main className="relative flex flex-col min-h-screen">
       {/* Hero section with background image */}
-      <div className="w-full h-[90vh] relative" style={{ 
-        backgroundImage: "url('https://images.unsplash.com/photo-1512758017271-d7b84c2113f1')", 
+      <div className="w-full h-[90vh] relative" 
+      style={{ 
+        backgroundImage: "url('https://images.unsplash.com/photo-1562516881-e4936381c3fa')", 
         backgroundSize: "cover", 
         backgroundPosition: "center",
       }}>
         {/* Overlay with reduced opacity */}
         <div className="absolute inset-0 bg-white opacity-50" style={{ 
-          backgroundImage: "linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(30, 120, 255, 0))"
+          backgroundImage: "linear-gradient(to bottom, rgba(240, 255, 255, 1), rgba(30, 120, 255, 0))"
         }}></div>
 
         {/* About Us */}
@@ -27,7 +28,7 @@ const About = () => {
           <h1 className="tracking-tight font-bold py-4 lg:text-6xl md:text-5xl text-4xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-sky-400 hover:from-amber-500 hover:to-yellow-500 transition-colors duration-700">The Supersqad <span className="font-normal">story</span>
           </h1>
           <p className="my-4 text-md text-primary">
-            <i>It all starts with...</i>
+            <i>Transformation begins within...</i>
           </p>
           </div>
         </div>
@@ -109,9 +110,9 @@ const About = () => {
           </dl>
         </div>
       </div>
-    <div className="w-full lg:h-auto bg-cover bg-center" 
+    <div className="w-full lg:h-auto bg-cover bg-center rounded-lg" 
       style={{ 
-      backgroundImage: "url('https://images.unsplash.com/photo-1663645446482-8c4d17787448?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3')", 
+      backgroundImage: "url('https://images.unsplash.com/photo-1634838872223-92ca3d20a927')", 
       backgroundSize: "cover", 
       backgroundPosition: "center" 
       }}>
@@ -175,95 +176,6 @@ const About = () => {
 </MaxWidthWrapper>
 
 <Investors/>
-     
-   {/* Pointers Section 1 */}
-   <MaxWidthWrapper>
-      <div className='w-full bg-secondary-background py-24 sm:py-16'>
-        <div className='max-w-[1240px] mx-auto grid md:grid-cols-2'>
-          <div className='flex flex-col justify-center text-center md:text-right md:pr-8'>
-            <p className='text-blue-500 font-bold'>FIND RESOURCES</p>
-            <h1 className='md:text-4xl sm:text-3xl text-2xl font-bold pb-6 tracking-tight'>Get skilled talent</h1>
-            <p>Whether you are seeking innovative solutions, expert guidance, or specialized skills, we provide access to top talent across various industries. We prioritize quality and expertise, ensuring that you find the right individuals who can drive projects forward. <br/> <br/>
-            Discover the difference that the right talent can make and start building your dream team today.
-            </p>      
-            <button className='bg-slate-500 w-[200px] text-white hover:bg-blue-800 rounded-md font-medium my-6 md:ml-auto mx-auto md:mx-0 py-3'><Link href={"./talent"}>Get Started</Link></button>
-          </div>
-          <div className='max-w-[500px] md:w-[auto] h-[auto] bg-slate-800 rounded-md bg-cover bg-center mx-auto my-4'>
-          <div className='text-primary-foreground m-8 p-4'>
-            <h1 className='font-bold text-xl'>Why Supersqadstudios?</h1> 
-            <p className='py-4'>
-            Access the top skilled talent-house on <a href="#"><u>Supersqad.com</u></a> and start working with contractors around the world without ever having to worry about the cost.
-            </p>
-            <div className='py-4'>
-            <div className="flex items-center space-x-3">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-        <path fillRule="evenodd" d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z" clipRule="evenodd" />
-      </svg>
-       <h3 className="group-hover:text-white text-sm font-semibold">Scalable Team</h3>
-              </div>
-              <p className="text-slate-200 group-hover:text-white text-sm">From one to many, get resources basis project requirements.
-              </p>
-              </div>
-        <div className='py-4'> 
-              <div className="flex items-center space-x-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-              <path fillRule="evenodd" d="M8.603 3.799A4.49 4.49 0 0112 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 013.498 1.307 4.491 4.491 0 011.307 3.497A4.49 4.49 0 0121.75 12a4.49 4.49 0 01-1.549 3.397 4.491 4.491 0 01-1.307 3.497 4.491 4.491 0 01-3.497 1.307A4.49 4.49 0 0112 21.75a4.49 4.49 0 01-3.397-1.549 4.49 4.49 0 01-3.498-1.306 4.491 4.491 0 01-1.307-3.498A4.49 4.49 0 012.25 12c0-1.357.6-2.573 1.549-3.397a4.49 4.49 0 011.307-3.497 4.49 4.49 0 013.497-1.307zm7.007 6.387a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clipRule="evenodd" />
-              </svg>
-              <h3 className="group-hover:text-white text-sm font-semibold">Verified Resources</h3>
-              </div>
-              <p className="text-slate-200 group-hover:text-white text-sm">Based on skillsets, aptitude and location.
-              </p>
-              </div>
-      </div>
-      </div>
-  </div>
-</div>
-</MaxWidthWrapper>
-
-{/* Pointers Section 2*/}
-<MaxWidthWrapper>
-<div className='w-full bg-secondary-background py-24 sm:py-16'>
-  <div className='max-w-[1240px] mx-auto grid md:grid-cols-2'>
-    <div className='max-w-[500px] md:w-[auto] h-[auto] bg-gray-600 rounded-md bg-cover bg-center mx-auto my-4'>
-      <div className='text-primary-foreground m-8 p-4'>
-      <h1 className='font-bold text-primary-foreground text-xl'>Why work with us?</h1> 
-      <p className='py-4'>
-      Find top remote jobs with contractors and employers on <a href="#"><u>Supersqad.com</u></a> and start working with a client around the world.
-      </p>
-      <div className='py-4'>
-      <div className="flex items-center space-x-3">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-            <path d="M5.055 7.06c-1.25-.714-2.805.189-2.805 1.628v8.123c0 1.44 1.555 2.342 2.805 1.628L12 14.471v2.34c0 1.44 1.555 2.342 2.805 1.628l7.108-4.061c1.26-.72 1.26-2.536 0-3.256L14.805 7.06C13.555 6.346 12 7.25 12 8.688v2.34L5.055 7.06z" />
-            </svg>
-            <h3 className="group-hover:text-white text-sm font-semibold">Dedicated Hiring</h3>
-              </div>
-              <p className="text-slate-200 group-hover:text-white text-sm">Regular hiring for agile media and tech ops.
-              </p>
-              </div>
-        <div className='py-4'>
-              <div className="flex items-center space-x-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-              <path d="M4.5 3.75a3 3 0 00-3 3v.75h21v-.75a3 3 0 00-3-3h-15z" />
-              <path fillRule="evenodd" d="M22.5 9.75h-21v7.5a3 3 0 003 3h15a3 3 0 003-3v-7.5zm-18 3.75a.75.75 0 01.75-.75h6a.75.75 0 010 1.5h-6a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3z" clipRule="evenodd" />
-              </svg>
-              <h3 className="group-hover:text-white text-sm font-semibold">Direct Pay</h3>
-              </div>
-              <p className="text-slate-200 group-hover:text-white text-sm">UPI, Credit Card and Bank Remittance.
-              </p>
-              </div>
-         </div>
-      </div>
-     <div className='flex flex-col justify-center text-center md:text-left md:pl-8'>
-      <p className='text-blue-500 font-bold'>FIND WORK</p>
-      <h1 className='md:text-4xl sm:text-3xl text-2xl font-bold pb-6 tracking-tight'>Gateway to meaningful work</h1>
-      <p>Enjoy work flexibility while collaborating on cutting-edge projects with leading companies. We help you connect with opportunities across diverse fields, allowing you to achieve your career goals from anywhere in the world. <br/> <br/> Discover the best remote jobs and become part of a thriving global workforce today.</p>      
-      <button className='bg-slate-500 w-[200px] text-white hover:bg-blue-600 rounded-md font-medium my-6 mx-auto md:mx-0 py-3'><Link href={"./resources"}>Get Started</Link></button>
-    </div>
-  </div>
-</div>  
-</MaxWidthWrapper> 
-
-<Testimonials/>
 
 {/* Call to action */}
 

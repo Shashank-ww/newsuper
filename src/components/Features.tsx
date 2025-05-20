@@ -1,43 +1,45 @@
 import { BoltIcon, PresentationChartLineIcon, RectangleGroupIcon, UserGroupIcon } from '@heroicons/react/24/outline';
+import MaxWidthWrapper from '@/components/MaxWidthWrapper';
 
 const features = [
   {
-    name: 'Cloud-based CRMs',
+    name: '360° Campaign Management',
     description:
       'We use cloud-based CRM solution that helps us manage customer and client relationship, empowering teams to centralize, organize, and optimize their interactions with clients.',
     icon: RectangleGroupIcon,
   },
   {
-    name: 'Dedicated Teams',
+    name: 'Dedicated Marketing Teams',
     description:
       'With a deep understanding of your objectives and unwavering commitment to excellence, our teams seamlessly integrate into your workflow, ensuring optimal results and smooth collaboration.',
     icon: UserGroupIcon,
   },
   {
-    name: 'Outsource Projects',
+    name: 'Outsource Media Production',
     description:
-      'Our dedicated team is always on standby to swiftly address any concerns, ensuring minimal disruptions and maximum satisfaction for our clients.',
+      'Our dedicated team is always on standby to swiftly address any concerns, ensuring minimal disruptions and maximum efficientcy on autonomous projects.',
     icon: BoltIcon,
   },
   {
-    name: 'Market Trends',
+    name: 'Reporting and Marketing Trends',
     description:
-      'From monitoring key metrics to identifying trends as they happen, with real-time reporting you can make informed decision and stay ahead of competition',
+      'From monitoring key metrics to identifying trends as they happen, with real-time reporting you can make informed decision and stay ahead of competition.',
     icon: PresentationChartLineIcon,
   },
 ]
 
 const Features = () => {
   return (
-    <div className="bg-white py-24 sm:py-32">
+    <MaxWidthWrapper>
+    <div className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-screen-lg lg:text-center">
           <h2 className="text-base font-bold leading-7 text-blue-500">INTEGRATED AGENCY APPROACH</h2>
           <p className="mt-2 lg:text-5xl md:text-4xl text-3xl font-bold tracking-tight text-gray-900">
-          Full-service Global Capability Center
+          A Full-service, Integrated Marketing Studio
           </p>
           <p className="mt-6 text-gray-700">
-          We aim to become the central hub embracing digital transformation for teams and businesses alike, providing comprehensive media production and seamlessly integrating technologies into every facet of business operations. We seek to enhance customer experiences, streamline work processes, and facilitate data-driven decision-making.
+          We aim to become the central hub embracing digital transformation for teams and businesses alike, providing comprehensive media production and seamlessly integrating marketing technologies into every facet of business operations. We seek to enhance customer experiences, streamline work processes, and facilitate data-driven decision-making.
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
@@ -57,6 +59,7 @@ const Features = () => {
         </div>
       </div>
     </div>
+    </MaxWidthWrapper>
   )
 }
 

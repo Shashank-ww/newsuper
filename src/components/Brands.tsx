@@ -19,7 +19,7 @@ function Brands() {
   return (
     <MaxWidthWrapper>
       <div className='w-full bg-secondary-background py-24 sm:py-16'>
-        <div className='mx-auto grid md:grid-cols-2'>
+        <div className='mx-auto grid md:grid-cols-2 gap-6'>
           <div className='lg:sticky top-24 self-start flex flex-col items-center justify-start md:pr-8'>
             <div className="max-w-md text-center lg:text-left items-center justify-end my-6 px-4">
               <p className='text-blue-500 font-bold'>TOP CLIENTELES</p>
@@ -34,8 +34,8 @@ function Brands() {
               </Link>
             </div>
           </div>
-          <div className='lg:w-[500px] md:w-[auto] h-[auto] shadow-2xl rounded-md bg-cover bg-center mx-auto'>
-            <div className='text-primary-background m-6 px-4'>
+          <div className='lg:w-full md:w-[auto] h-[auto] bg-cover bg-center mx-auto rounded-xl shadow-lg border-2 border-gray-300'>
+            <div className='text-primary-background m-6'>
               <div className="w-full grid grid-cols-2 gap-y-12 py-12 items-center mx-auto">
                 {logos.map((logo, index) => (
                   <div key={index} className="flex items-center justify-center w-full h-full p-2">

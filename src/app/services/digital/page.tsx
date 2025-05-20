@@ -15,7 +15,7 @@ import Image from "next/image";
 
 const Digital = () => {
   return (
-    <main className="relative flex flex-col min-h-screen mx-auto max-w-screen-lg items-center justify-center">
+    <main className="relative flex flex-col min-h-screen mx-auto items-center justify-center">
       {/* Meta Tags */}
       <Head>
         <title>Digital Transformation Services - Supersqad studios</title>

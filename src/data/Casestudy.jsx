@@ -10,9 +10,10 @@ export const brandTransformationCaseStudy = () => (
       </p>
       <h3 className="text-xl font-semibold">Our Approach:</h3>
       <ul className="list-disc pl-12 space-y-2">
-        <li><strong>Brand Audit & Research:</strong> In-depth audit of the brand’s current identity, market positioning, and customer perception.</li>
+        <li><strong>Brand Audit & Research:</strong> In-depth audit of the brands current identity, market positioning, and customer perception.</li>
         <li><strong>Creative Redesign:</strong> Crafted a bold, modern visual identity with a refreshed logo, color scheme, and typography.</li>
-        <li><strong>Brand Guidelines & Rollout:</strong> Developed comprehensive brand guidelines and managed a smooth rollout.</li>
+        <li><strong>Brand Guidelines & Rollout:</strong> Developed comprehensive brand guidelines and managed a smooth rollout.
+        </li>
       </ul>
       {/* Collage Image */}
       <div className="my-12">

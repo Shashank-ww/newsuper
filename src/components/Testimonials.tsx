@@ -37,10 +37,10 @@ const Testimonials = () => {
 
   return (
       <MaxWidthWrapper>
-    <div className="py-24 sm:py-16 mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-8">What Our Clients Say</h2>
+    <div className="py-24 sm:py-16 mx-auto text-center">
+        <h2 className="font-bold mx-auto mt-2 lg:text-5xl md:text-4xl text-3xl tracking-tight text-gray-900">What Our Clients Say</h2>
         <div className="w-full flex items-center justify-center mb-12 px-4">
-          <p className="max-w-prose text-center">
+          <p className="max-w-prose mt-6 text-gray-700">
             Our clients value our innovative solutions, strategic planning, and responsive support. Their feedback highlights our dedication to top-quality, timely delivery, and consistent results.
           </p>
         </div>

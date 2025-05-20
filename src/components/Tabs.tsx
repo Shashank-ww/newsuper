@@ -68,7 +68,7 @@ const Tabs = () => {
     <MaxWidthWrapper>
       <div id='tabs' className="w-full mx-auto pb-12">
         {/* Tab Navigation */}
-        <div className="max-w-[1240px] mx-auto grid md:grid-cols-3 gap-6 pb-11 border-b-2 border-gray-300">
+        <div className="max-w-[1240px] mx-auto grid md:grid-cols-3 gap-6 pb-11">
           {TabsCard.map((tab) => (
             <div key={tab.id}>
               <button
@@ -94,7 +94,7 @@ const Tabs = () => {
 
         {/* Tab Content */}
         {activeContent && (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 py-24">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 py-12 rounded-xl shadow-lg border-2 border-gray-300">
             {/* Image Section */}
             <div className="relative w-full h-72">
               <Image
@@ -102,17 +102,17 @@ const Tabs = () => {
                 alt={`Image for ${activeContent.title}`}
                 width={600}
                 height={600}
-                className="rounded-md object-contain w-full h-full"
+                className="object-contain w-full h-full border-r-2 border-r-blue-300"
               />
             </div>
 
             {/* Content Section */}
-            <div className='pl-4'>
+            <div className='p-4'>
               <h2 className="text-base font-bold leading-7 text-blue-500">{activeContent.tabname}</h2>
               <h1 className="py-2 text-xl font-bold tracking-tight text-primary sm:text-3xl">
                 {activeContent.title}
               </h1>
-              <p className="py-2 leading-7">{activeContent.description}</p>
+              <p className="py-2 max-w-md leading-7">{activeContent.description}</p>
             </div>
           </div>
         )}
