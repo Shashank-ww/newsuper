@@ -5,12 +5,12 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { servicesData } from "@/lib/servicesData";
 
-import Testimonials from "@/components/Testimonials";
 import Brands from "@/components/Brands";
 import FloatingBlock from "@/components/FloatingBlock";
 import Poweredby from "@/components/Poweredby";
 import Tabs from "@/components/Tabs";
 import Features from "@/components/Features";
+import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
 
@@ -89,7 +89,7 @@ export default function Home() {
 With 12+ years of experience in media management and tech operations, we help brands make confident decisions through quality content execution and tailored strategies.
         <br/>
         <br/>
-Unlike big agencies bound by conflicts of interest or top-down directives, we're proudly independent—focused solely on delivering smart, unbiased, and impactful results for our clients.
+Unlike big agencies bound by conflicts of interest or top-down directives, we&apos;re proudly independent—focused solely on delivering smart, unbiased, and impactful results for our clients.
       </p>
     </div>
 </MaxWidthWrapper>
@@ -227,7 +227,7 @@ Unlike big agencies bound by conflicts of interest or top-down directives, we're
 </div>  
 </MaxWidthWrapper> 
 
-  <Testimonials/>
+<Testimonials/>
 
   <MaxWidthWrapper>
         <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-16 lg:px-4">

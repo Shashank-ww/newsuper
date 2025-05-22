@@ -2,7 +2,6 @@ import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 
 import Stats from "@/components/Stats";
 import Testimonials from "@/components/Testimonials";
-import Link from "next/link";
 import Investors from "@/components/Investors";
 import Callaction from "@/components/Callaction";
 
@@ -178,6 +177,8 @@ const About = () => {
 <Investors/>
 
 {/* Call to action */}
+
+<Testimonials/>
 
 <Callaction/>
 
