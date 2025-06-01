@@ -4,7 +4,7 @@ const Stats = () => {
     const stats = [
       { id: 1, name: "Projects created and deployed", value: "47+" },
       { id: 2, name: "Media companies and channel partners", value: "Over 3" },
-      { id: 3, name: "^Monthly budget management", value: "$1 million" },
+      { id: 3, name: "*Monthly budget management", value: "$1 million" },
     ];
     
     return (

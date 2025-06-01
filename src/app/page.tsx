@@ -101,44 +101,53 @@ Unlike big agencies bound by conflicts of interest or top-down directives, we&ap
    <Brands/>
 
 <MaxWidthWrapper>
-    <div className="py-20 flex flex-col items-center justify-center">
-      <p className="mx-auto text-sky-500 text-sm text-center items-center justify-center font-bold">
-        CORE CAPABILITIES
-      </p>
-      <h2 className="font-bold mx-auto mt-2 lg:text-5xl md:text-4xl text-3xl tracking-tight text-gray-900">
-        Discover Our Services
-      </h2>
-      <p className='mx-auto mt-6 text-gray-700 items-center justify-center text-center md:max-w-screen-md'>
-      The belief we follow, the work we do, the brands we use, the bread we eat, everything revolves around the decisions we make. Discover how our services can maximize digital excellence in your connected world
-      </p>
-    </div>
+  <div className="py-20 flex flex-col items-center justify-center">
+    <p className="mx-auto text-sky-500 text-sm text-center font-bold">
+      CORE CAPABILITIES
+    </p>
+    <h2 className="font-bold mx-auto mt-2 lg:text-5xl md:text-4xl text-3xl tracking-tight text-gray-900">
+      Discover Our Services
+    </h2>
+    <p className="mx-auto mt-6 text-gray-700 text-center md:max-w-screen-md">
+      The belief we follow, the work we do, the brands we use, the bread we eat,
+      everything revolves around the decisions we make. Discover how our services
+      can maximize digital excellence in your connected world
+    </p>
+  </div>
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 items-center justify-center gap-4 md:p-12">
-      {servicesData.map((service, index) => (
-        <div key={index} className="relative w-full overflow-hidden rounded-md group">
-          {/* Background Image */}
-          <div className="w-full h-[300px] bg-cover bg-top"
-            style={{
-              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), url(${service.imageUrl})`,
-              backgroundColor: 'lightgray',
-            }}>
-            <h2 className="absolute z-10 w-fit text-md font-semibold m-4 p-2 bg-slate-800 rounded-sm text-primary-foreground">{service.title}</h2>
-            {/* Overlay */}
-            <div className="absolute inset-0 flex flex-col justify-center px-4 py-6 bg-white bg-opacity-100 transition-opacity duration-100 opacity-0 group-hover:opacity-100">
-              {/* Content */}
-              <h3 className="text-sm font-light text-blue-400 mb-2">{service.useCase}</h3>
-              <p className="text-sm">
-                {service.description}
-              </p>
-              <span className="text-sm py-2">
-                <a href={service.link}>See More <span>&#10132;</span></a>
-              </span>
-            </div>
-          </div>
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 items-center justify-center gap-4 md:p-12">
+    {servicesData.map((service, index) => (
+      <div
+        key={index}
+        className="relative group rounded-md overflow-hidden h-[400px] bg-gray-100 shadow-md"
+      >
+        {/* Background Image & Title */}
+        <div
+          className="absolute inset-0 bg-cover bg-center transition-transform duration-[3000ms] ease-out group-hover:-translate-y-6"
+          style={{
+            backgroundImage: `url(${service.imageUrl})`,
+          }}
+        />
+        <div className="absolute top-0 left-0 m-4 z-10 bg-slate-800 text-primary-foreground text-md font-semibold px-3 py-1 rounded-sm">
+          {service.title}
         </div>
-      ))}
-    </div>
-  </MaxWidthWrapper>
+
+        {/* Slide-up Overlay on Hover */}
+        <div className="absolute bottom-0 left-0 w-full h-1/2 bg-white bg-opacity-90 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out z-20">
+          <h3 className="text-sm font-light text-blue-400 mb-1">{service.useCase}</h3>
+          <p className="text-sm text-gray-800">{service.description}</p>
+          <span className="text-sm text-blue-500 mt-2 inline-block">
+            <a href={service.link}>See More <span>&#10132;</span></a>
+          </span>
+        </div>
+
+        {/* Dark overlay for readability */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent z-10" />
+      </div>
+    ))}
+  </div>
+</MaxWidthWrapper>
+
 
   {/* Pointers Section 1 */}
    <MaxWidthWrapper>

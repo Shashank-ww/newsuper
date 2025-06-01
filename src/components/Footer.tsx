@@ -35,7 +35,7 @@ const Footer = () => {
             </div>
             
             <p className='py-4 w-[80%] text-xs'>
-            Outsource effortless media production and tech ops with our exclusive services and supersqads.
+            Outsource marketting production and media tech ops with our niche supersqads.
             </p>
            <div className='flex justify-start py-4 gap-4 md:w[50% my-4]'>
                 <SlSocialGoogle size={20} />
@@ -46,7 +46,7 @@ const Footer = () => {
             </div>
             <div className='text-slate-300 hidden lg:block mt-4'>
                 Technical Info:
-          <p className='text-xs'>pre-build:4.2 rv7.7</p>
+          <p className='text-xs'>pre-build:21.2 rv7.7</p>
           <p className='text-xs'>v7.79 w.d:42.6</p>
           </div>
         </div>
@@ -100,11 +100,10 @@ const Footer = () => {
         </div>
 </div>
 </MaxWidthWrapper>
-<div className='flex items-center justify-center text-center border-t border-gray-600 text-muted-foreground'> 
+<div className='flex items-center justify-center text-center border-t border-gray-600 text-muted-foreground cursor-default'> 
     <ul className='mx-auto hidden lg:flex lg:items-center py-2 text-xs'>
-        <li className='p-1'>Terms of Service</li>  
-        <li className='p-1'>GDPR</li>
-        <li className='p-1'>Cookie Settings</li>
+        <li className='p-1 hover:underline'>Terms of Service</li>
+        <li className='p-1 hover:underline'>Cookie Settings</li>
     </ul>
     <p className='py-4 px-2 mx-auto text-xs text-muted-foreground'>
         <span>&copy; 2024 - {new Date().getFullYear()} Supersqad.com&#8482;</span> {'\n'} All Rights Reserved. 

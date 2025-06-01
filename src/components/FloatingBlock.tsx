@@ -19,7 +19,7 @@ const FloatingBlock = () => {
   }, []);
 
   return (
-    <div id="floatingblock" className="lg:flex hidden absolute right-[27%] top-[75%] -translate-y-2/3 w-[300px] p-4 h-auto mx-auto backdrop-blur-lg bg-accent/70 rounded-md shadow-lg items-center justify-start space-x-4">
+    <div id="floatingblock" className="lg:flex hidden absolute right-[27%] top-[75%] -translate-y-2/3 w-auto p-4 h-auto mx-auto backdrop-blur-lg bg-accent/70 rounded-md shadow-lg items-center justify-start space-x-4">
       <Image
         className="h-12 w-12 rounded-full"
         src={currentTestimonial.imagePath}

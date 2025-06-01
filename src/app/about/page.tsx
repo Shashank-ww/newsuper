@@ -1,7 +1,6 @@
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 
 import Stats from "@/components/Stats";
-import Testimonials from "@/components/Testimonials";
 import Investors from "@/components/Investors";
 import Callaction from "@/components/Callaction";
 
@@ -84,7 +83,7 @@ const About = () => {
   <div className="lg:pl-8 lg:pt-4">
         <div className="lg:max-w-lg">
           <h2 className="text-base font-bold leading-7 text-blue-400">WHO WE ARE</h2>
-          <h1 className="mt-2 text-3xl font-bold tracking-tight text-primary-foreground sm:text-3xl">Partner in delivering digital solutions to maximize outreach</h1>
+          <h1 className="mt-2 text-3xl font-bold tracking-tight text-primary-foreground sm:text-3xl">Partner in engineering marketing solutions to maximize outreach</h1>
           <p className="mt-6 leading-7 text-white">A go-to hub for businesses undergoing digital transformation, asset production or technology integration into all aspects of executable operations, client experiences, optimized processes, and data-driven decision-making.</p>
           <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-white lg:max-w-none">
             <div className="relative pl-12">
@@ -177,8 +176,6 @@ const About = () => {
 <Investors/>
 
 {/* Call to action */}
-
-<Testimonials/>
 
 <Callaction/>
 
