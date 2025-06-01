@@ -20,14 +20,14 @@ const logos = [
 
 function Poweredby() {
   return (
-    <div className="w-full overflow-hidden py-8"> {/* add white bg here */}
+    <div className="w-full overflow-hidden py-8">
       <h2 className="text-center text-sm font-bold text-blue-500 mb-6">
         &mdash;&mdash; POWERED BY &mdash;&mdash;
       </h2>
 
-      <div className="relative w-full overflow-hidden z-0"> {/* z-0 for container */}
+      <div className="relative w-full overflow-hidden z-0 group"> {/* z-0 for container */}
 
-        <div className="flex animate-marquee space-x-12 z-0 relative"> {/* logos behind overlays */}
+        <div className="flex animate-marquee space-x-12 z-0 relative group-hover:[animation-play-state:paused]"> {/* logos behind overlays */}
           {[...logos, ...logos].map((logo, index) => (
             <Image
               key={index}

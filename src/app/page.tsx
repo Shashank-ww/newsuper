@@ -65,13 +65,13 @@ export default function Home() {
 
    <MaxWidthWrapper>
     <div className="py-20 w-full flex flex-col items-center justify-center">
-    <h2 className="font-bold mb-6 lg:text-5xl md:text-4xl text-3xl lg:text-secondary-foreground tracking-tight text-center text-gray-900">
-      Independent media marketing partner
+    <h2 className="font-bold mb-6 lg:text-5xl md:text-4xl text-3xl lg:text-secondary-foreground tracking-tight text-center text-gray-900"> 
+      Redefining modern media marketing
       </h2>
         <p className="max-w-prose-lg text-center font-medium mb-6">
-         We are shaping the future of digital, with research, creativity and technology</p>
+          We are shaping the future of digital, with research, creativity and technology</p>
         <p className="max-w-screen-md text-center mb-6">
-        Our approach is centered on leveraging data-driven consumer insights that drives competitive advantage, to reimagine and reinvent creative brands for digital-age of the coming
+          Our approach is centered on leveraging data-driven consumer insights that drives competitive advantage, to reimagine and reinvent creative brands for digital-age of the coming
         </p>
         <Poweredby/>
     </div>
@@ -83,22 +83,22 @@ export default function Home() {
         WHAT WE DO
       </p>
       <h2 className="mx-auto mb-6 lg:text-5xl md:text-4xl sm:text-3xl text-2xl font-bold tracking-tight text-gray-900 ">
-        Start up, Stack up, Scale up
+        Start up. Stack up. Scale up.
       </h2>
-      <p className='mx-auto pb-4 items-center justify-center text-center md:max-w-screen-md'>
-With 12+ years of experience in media management and tech operations, we help brands make confident decisions through quality content execution and tailored strategies.
+      <p className='mx-auto pb-4 items-center justify-center text-center md:max-w-screen-lg'>
+        We help brands make confident marketing decisions through tailored media strategies and quality content execution.
         <br/>
         <br/>
-Unlike big agencies bound by conflicts of interest or top-down directives, we&apos;re proudly independent—focused solely on delivering smart, unbiased, and impactful results for our clients.
+        Unlike big agencies bound by conflicts of interest and top-down directives, we&apos;re proudly independent—focused solely on delivering smart, unbiased, and impactful results for our clients. Driven by truth, well told.
       </p>
     </div>
 </MaxWidthWrapper>
 
     <Tabs/>
 
-   <Features/>
+    <Features/>
 
-   <Brands/>
+    <Brands/>
 
 <MaxWidthWrapper>
   <div className="py-20 flex flex-col items-center justify-center">
@@ -123,7 +123,7 @@ Unlike big agencies bound by conflicts of interest or top-down directives, we&ap
       >
         {/* Background Image & Title */}
         <div
-          className="absolute inset-0 bg-cover bg-center transition-transform duration-[3000ms] ease-out group-hover:-translate-y-6"
+          className="absolute inset-0 bg-cover bg-center transition-transform duration-3000 ease-out group-hover:-translate-y-6"
           style={{
             backgroundImage: `url(${service.imageUrl})`,
           }}
@@ -142,7 +142,7 @@ Unlike big agencies bound by conflicts of interest or top-down directives, we&ap
         </div>
 
         {/* Dark overlay for readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent z-10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10" />
       </div>
     ))}
   </div>

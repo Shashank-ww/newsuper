@@ -34,12 +34,12 @@ const Features = () => {
     <div className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-screen-lg lg:text-center">
-          <h2 className="text-base font-bold leading-7 text-blue-500">INTEGRATED AGENCY APPROACH</h2>
+          <h2 className="text-base font-bold leading-7 text-blue-500">UNIFIED THINKING, ONE STUDIO</h2>
           <p className="mt-2 lg:text-5xl md:text-4xl text-3xl font-bold tracking-tight text-gray-900">
-          A Full-service, Integrated Marketing Studio
+           Integrated. Intelligent. Impactful.
           </p>
           <p className="mt-6 text-gray-700">
-          We aim to become the central hub embracing digital transformation for teams and businesses alike, providing comprehensive media production and seamlessly integrating marketing technologies into every facet of business operations. We seek to enhance customer experiences, streamline work processes, and facilitate data-driven decision-making.
+          We are the central hub embracing digital transformation with teams and businesses alike, providing comprehensive media production and seamlessly integrating marketing technologies into every facet of business operations. Seeking to enhance customer experiences, streamline work processes, and facilitate data-driven decision-making.
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
