@@ -27,7 +27,7 @@ export const profileData: Record<typeof Talents[number], Profile[]> = {
     {
       name: "Gabriel Courtemanche",
       role: "JavaScript Developer",
-      rate: 25,
+      rate: 250,
       expertise: ["DevOps", "Git", "Node.js", "JavaScript"],
       lastWorkedAt: "Shopify",
       experience: 1.5,
@@ -37,7 +37,7 @@ export const profileData: Record<typeof Talents[number], Profile[]> = {
     {
       name: "Loren Suokoi",
       role: "Python Developer",
-      rate: 23,
+      rate: 140,
       expertise: ["Flask", "Django", "Git"],
       lastWorkedAt: "Google",
       experience: 1.5,
@@ -49,7 +49,7 @@ export const profileData: Record<typeof Talents[number], Profile[]> = {
     {
       name: "Alicia Johnson",
       role: "UX/UI Designer",
-      rate: 24,
+      rate: 240,
       expertise: ["Figma", "Sketch", "Adobe XD"],
       lastWorkedAt: "Figma",
       experience: 4,
@@ -59,7 +59,7 @@ export const profileData: Record<typeof Talents[number], Profile[]> = {
     {
       name: "Krish Srivastava",
       role: "Motion Graphics Designer",
-      rate: 20,
+      rate: 200,
       expertise: ["Premiere Pro", "AfterEffects", "3D Max", "Maya"],
       lastWorkedAt: "Appinventive",
       experience: 1.5,
@@ -69,7 +69,7 @@ export const profileData: Record<typeof Talents[number], Profile[]> = {
     {
       name: "Amercia Logan",
       role: "JS Developer",
-      rate: 15,
+      rate: 150,
       expertise: ["Native", "Django", "Git"],
       lastWorkedAt: "Google",
       experience: 2,
@@ -81,7 +81,7 @@ export const profileData: Record<typeof Talents[number], Profile[]> = {
     {
       name: 'Alex Martin',
       role: 'Project Manager',
-      rate: 20,
+      rate: 220,
       expertise: ['Agile', 'Scrum', 'Jira', 'Trello'],
       lastWorkedAt: 'Microsoft',
       experience: 2,
@@ -91,7 +91,7 @@ export const profileData: Record<typeof Talents[number], Profile[]> = {
     {
       name: "Amisha Patel",
       role: "Account Manager",
-      rate: 10,
+      rate: 120,
       expertise: ["Flask", "Django", "Git"],
       lastWorkedAt: "Google",
       experience: 1,
@@ -101,7 +101,7 @@ export const profileData: Record<typeof Talents[number], Profile[]> = {
     {
       name: "Devi Sharma",
       role: "Senior Manager",
-      rate: 18,
+      rate: 180,
       expertise: ["Flask", "Django", "Git"],
       lastWorkedAt: "Google",
       experience: 2.6,
@@ -111,7 +111,7 @@ export const profileData: Record<typeof Talents[number], Profile[]> = {
     {
       name: "Dhruv Gautam",
       role: "Python Developer",
-      rate: 14,
+      rate: 140,
       expertise: ["Flask", "Django", "Git"],
       lastWorkedAt: "Google",
       experience: 2.2,
@@ -121,7 +121,7 @@ export const profileData: Record<typeof Talents[number], Profile[]> = {
     {
       name: "Sara Ali Khan",
       role: "Sr. Manager",
-      rate: 20,
+      rate: 200,
       expertise: ["Flask", "Django", "Git"],
       lastWorkedAt: "Google",
       experience: 2.2,
@@ -133,7 +133,7 @@ export const profileData: Record<typeof Talents[number], Profile[]> = {
     {
       name: 'Sophia Lee',
       role: 'Product Manager',
-      rate: 24,
+      rate: 224,
       expertise: ['Roadmaps', 'User Stories', 'Market Research'],
       lastWorkedAt: 'Amazon',
       experience: 2,
@@ -145,7 +145,7 @@ export const profileData: Record<typeof Talents[number], Profile[]> = {
     {
       name: 'Mark Thompson',
       role: 'Marketing Strategist',
-      rate: 27,
+      rate: 270,
       expertise: ['SEO', 'Google Ads', 'Content Marketing'],
       lastWorkedAt: 'HubSpot',
       experience: 2.2,
@@ -157,7 +157,7 @@ export const profileData: Record<typeof Talents[number], Profile[]> = {
     {
       name: 'David Smith',
       role: 'Visual Effects Artist',
-      rate: 14,
+      rate: 140,
       expertise: ['Maya', 'After Effects', 'Cinema 4D'],
       lastWorkedAt: 'Pixar',
       experience: 3.5,
@@ -169,7 +169,7 @@ export const profileData: Record<typeof Talents[number], Profile[]> = {
     {
       name: 'Jennifer Taylor',
       role: 'Virtual Assistant',
-      rate: 15,
+      rate: 150,
       expertise: ['Calendar Management', 'Email Support', 'Data Entry'],
       lastWorkedAt: 'RemoteCo',
       experience: 3,

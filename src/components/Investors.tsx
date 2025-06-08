@@ -10,19 +10,19 @@ const partners = [
     image: '/webimgs/avatars/investors/rahul.jpg',
   },
   {
-    name: 'Somsak Wong',
+    name: 'Qian Mingze',
     title: 'Partner, Venture Pathways',
-    image: '/webimgs/avatars/investors/johnathanwong.jpg',
+    image: '/webimgs/avatars/investors/Qian.jpg',
   },
   {
     name: 'Divya Singh',
     title: 'Chief Marketing Officer, NovaTech Solutions',
-    image: '/webimgs/avatars/investors/divya.jpg',
+    image: '/webimgs/avatars/investors/investor2.jpg',
   },
   {
-    name: 'Dr. Ashwini Bhatia',
-    title: 'Rheumatologist, Prime Health Group',
-    image: '/webimgs/avatars/investors/suresh.jpg',
+    name: 'Karthik Ramakrishnan',
+    title: 'Development Partner, Prime Group',
+    image: '/webimgs/avatars/investors/karthik1.png',
   },
   {
     name: 'Dr Naresh Solanki',
@@ -58,7 +58,7 @@ export default function Investors() {
                   src={partner.image} 
                   alt={partner.name} 
                   className="h-36 w-36 object-cover object-top mb-4 rounded-full transition-all duration-100 ease-in-out group-hover:grayscale-0 grayscale"
-                  style={{ objectPosition: '50% 40%' }}
+                  style={{ objectPosition: '20% 40%' }}
                   width={400}
                   height={400} 
                 />

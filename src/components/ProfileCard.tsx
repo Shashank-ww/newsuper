@@ -73,7 +73,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ profiles, children }) => {
             <ul className="text-sm space-y-1">
                 <li>
                     <span className='font-semibold'>Rate </span>
-                    ${profile.rate}/hour
+                    INR {profile.rate}/hour
                 </li>
                 <li>
                     <span className='font-semibold'>Experience </span>

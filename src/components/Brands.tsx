@@ -23,12 +23,12 @@ function Brands() {
           <div className='lg:sticky top-24 self-start flex flex-col items-center justify-start md:pr-8'>
             <div className="max-w-md text-center lg:text-left items-center justify-end my-6 px-4">
               <p className='text-blue-500 font-bold'>TOP CLIENTELES</p>
-              <h1 className='lg:text-5xl md:text-4xl sm:text-3xl text-2xl font-bold pb-6 tracking-tight'>Global visionaries</h1>
+              <h1 className='mb-6 lg:text-5xl md:text-4xl text-3xl font-bold tracking-tight text-gray-900'>Global visionaries</h1>
               <p>
-              We have had the privilege to collaborate, represent diverse clients with global reach, reflecting the trust and excellence we cultivated through our services. <br/> <br/> Built upon innovation and partnership, we are reinforcing our commitment in delivering impactful results.
+              We are privileged to collaborate, represent diverse clients with global reach, reflecting their trust and excellence, cultivated through times. <br/> <br/> Built upon innovation and partnership, we are reinforcing our commitment in delivering impactful results.
               </p>
               <Link href='/explore#work'>
-              <Button variant={'default'} className='mt-12'>
+              <Button variant={'default'} className='mt-12 hover:bg-blue-600'>
                 See All work
               </Button>
               </Link>

@@ -65,8 +65,8 @@ export default function Home() {
 
    <MaxWidthWrapper>
     <div className="py-20 w-full flex flex-col items-center justify-center">
-    <h2 className="font-bold mb-6 lg:text-5xl md:text-4xl text-3xl lg:text-secondary-foreground tracking-tight text-center text-gray-900"> 
-      Redefining modern media marketing
+    <h2 className="mb-6 lg:text-5xl md:text-4xl text-3xl font-bold tracking-tight text-gray-900"> 
+      Redefine modern media marketing
       </h2>
         <p className="max-w-prose-lg text-center font-medium mb-6">
           We are shaping the future of digital, with research, creativity and technology</p>
@@ -82,7 +82,7 @@ export default function Home() {
       <p className="mx-auto text-sky-500 text-sm text-center items-center justify-center font-bold">
         WHAT WE DO
       </p>
-      <h2 className="mx-auto mb-6 lg:text-5xl md:text-4xl sm:text-3xl text-2xl font-bold tracking-tight text-gray-900 ">
+      <h2 className="mx-auto mb-6 lg:text-5xl md:text-4xl text-3xl font-bold tracking-tight text-gray-900">
         Start up. Stack up. Scale up.
       </h2>
       <p className='mx-auto pb-4 items-center justify-center text-center md:max-w-screen-lg'>
@@ -106,12 +106,10 @@ export default function Home() {
       CORE CAPABILITIES
     </p>
     <h2 className="font-bold mx-auto mt-2 lg:text-5xl md:text-4xl text-3xl tracking-tight text-gray-900">
-      Discover Our Services
+      Discover services. Delivered seamlessly.
     </h2>
     <p className="mx-auto mt-6 text-gray-700 text-center md:max-w-screen-md">
-      The belief we follow, the work we do, the brands we use, the bread we eat,
-      everything revolves around the decisions we make. Discover how our services
-      can maximize digital excellence in your connected world
+      The belief we follow, the work we do, the brands we use, the bread we eat, everything revolves around the decisions we make. Discover how our services can maximize digital excellence in your connected world.
     </p>
   </div>
 
@@ -134,7 +132,7 @@ export default function Home() {
 
         {/* Slide-up Overlay on Hover */}
         <div className="absolute bottom-0 left-0 w-full h-1/2 bg-white bg-opacity-90 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out z-20">
-          <h3 className="text-sm font-light text-blue-400 mb-1">{service.useCase}</h3>
+          <h3 className="text-pretty font-bold text-blue-400 mb-1">{service.useCase}</h3>
           <p className="text-sm text-gray-800">{service.description}</p>
           <span className="text-sm text-blue-500 mt-2 inline-block">
             <a href={service.link}>See More <span>&#10132;</span></a>
@@ -261,9 +259,10 @@ export default function Home() {
           <div className="relative mt-16 h-80 lg:mt-8">
           <div className="absolute left-0 top-0 w-[500px] h-[500px] rounded-md bg-white/5 ring-1 ring-white/10"
             style={{
-              backgroundImage: "url('https://images.unsplash.com/photo-1576267423429-569309b31e84?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3')",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
+              backgroundImage: "url('/webimgs/album/Picture1.png')",
+              backgroundSize: "contain",
+              backgroundPosition: "top",
+              backgroundRepeat:"no-repeat"
             }}>
             </div>
             </div>
