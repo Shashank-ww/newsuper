@@ -61,9 +61,21 @@ export default {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-50%)' },
         },
+		confettiPop: {
+		'0%': { transform: 'scale(0.5)', opacity: '0' },
+		'40%': { transform: 'scale(1.2)', opacity: '1' },
+		'100%': { transform: 'scale(0.8)', opacity: '0' },
+		},
+		float: {
+		'0%': { transform: 'translateY(0)', opacity: '1' },
+		'100%': { transform: 'translateY(-120px)', opacity: '0' },
+		}
+
       },
       animation: {
         marquee: 'marquee 30s linear infinite',
+		confetti: 'confettiPop 1.5s ease-in-out forwards',
+		float: 'float 1.2s ease-in-out forwards',
       },
   	}
   },

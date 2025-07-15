@@ -34,9 +34,9 @@ export default function Home() {
 
     <MaxWidthWrapper>
       <div className="relative flex flex-col z-10 text-center md:text-left py-6 max-w-xl mx-auto lg:-mx-20 lg:pl-10">
-        <p>Independent Media and Tech Studio &mdash;</p>
+        <p>Independent Marketing Studio &mdash;</p>
         <h1 className="font-bold lg:text-6xl md:text-5xl text-4xl tracking-tight bg-gradient-to-tr from-blue-600 to-sky-400 bg-clip-text text-transparent">
-            Maximize customer excellence in a connected world 
+            Maximize market excellence in a connected world 
         </h1>
         <h2 className="mt-4 font-medium text-accent-foreground">Professional expertise for advanced marketing</h2>
           <p className="my-4 text-md text-primary">
