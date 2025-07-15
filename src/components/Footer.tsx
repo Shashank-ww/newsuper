@@ -80,7 +80,7 @@ const Footer = () => {
 
         <div className='flex lg:grid-cols-2 space-x-8 justify-stretch'>
         <div className='flex-1'>
-            <h6 className='font-medium text-base border-b border-1 border-gray-700 py-2 mb-2'>Resources</h6>
+            <h6 className='font-medium text-base border-b border-1 border-gray-700 py-2 mb-2'>Media</h6>
             <ul className='text-muted-foreground'>
                 <li className='py-2 text-xs block hover:underline'>
                 <Link href="/blog">Blogs</Link>

@@ -94,7 +94,7 @@ const Tabs = () => {
 
         {/* Tab Content */}
         {activeContent && (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 py-12 rounded-xl shadow-lg border-2 border-gray-300">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 py-12 rounded-xl shadow-lg border-2 border-gray-300 hover:border-sky-500">
             {/* Image Section */}
             <div className="relative w-full h-72">
               <Image

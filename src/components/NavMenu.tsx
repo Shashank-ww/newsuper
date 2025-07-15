@@ -127,7 +127,7 @@ export function NavMenu () {
         <NavigationMenuItem>
           <Link href="/resources" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Resources
+              Media
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>

@@ -15,7 +15,7 @@ const Resources = () => {
                     <MaxWidthWrapper>
                     <div className="mx-auto py-20 min-h-[400px] flex flex-col items-left justify-center">
                     <div className="mx-4 p-2 font-bold text-blue-500 mb-4 md:mr-4 md:mb-0">
-                    &#129174; RESOURCES
+                    &#129174; MEDIA CENTRE
                     </div>
                         <h2 className="mx-4 lg:text-5xl md:text-4xl sm:text-3xl text-2xl font-light mb-4 md:mr-4 md:mb-0 text-accent-foreground">
                         Looking for something?

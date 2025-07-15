@@ -39,7 +39,7 @@ const Features = () => {
            Integrated. Intelligent. Impactful.
           </p>
           <p className="mt-6 text-gray-700">
-          We are the central hub embracing digital transformation with teams and businesses alike, providing comprehensive media production and seamlessly integrating marketing technologies into every facet of business operations. Seeking to enhance customer experiences, streamline work processes, and facilitate data-driven decision-making.
+          We are the central hub embracing digital transformation, providing comprehensive media production and seamlessly integrating marketing technologies into every facet of business operations. Seeking to enhance customer experiences, streamline work processes, and facilitate data-driven decision-making.
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
