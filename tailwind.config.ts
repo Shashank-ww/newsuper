@@ -59,7 +59,7 @@ export default {
 		keyframes: {
         marquee: {
           '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-50%)' },
+          '100%': { transform: 'translateX(-60%)' },
         },
 		confettiPop: {
 		'0%': { transform: 'scale(0.5)', opacity: '0' },
@@ -73,7 +73,7 @@ export default {
 
       },
       animation: {
-        marquee: 'marquee 30s linear infinite',
+        marquee: 'marquee 20s linear infinite',
 		confetti: 'confettiPop 1.5s ease-in-out forwards',
 		float: 'float 1.2s ease-in-out forwards',
       },

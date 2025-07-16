@@ -51,7 +51,9 @@ const NavBar = () => {
   return (
     <nav
       className={`navbar fixed w-full top-0 z-50 transition-all duration-300 ${
-        isScrolled ? "navbar-scrolled backdrop-blur-lg bg-accent-dark/80 shadow-md" : "bg-transparent"
+          isScrolled || isMobileMenuOpen
+          ? "backdrop-blur-lg bg-accent-dark/80 shadow-md"
+          : "bg-transparent"
       }`}
     >
       <div className="navbar-content flex justify-between items-center h-16 mx-auto p-4">

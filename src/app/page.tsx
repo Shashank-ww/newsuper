@@ -45,7 +45,7 @@ export default function Home() {
           <div className="mt-4 text-center md:text-left">
             <Link href={"/contact"} passHref>
             <Button 
-            className="bg-[#0066ff] inline-block md:inline-block lg:block" 
+            className="bg-[#0066ff] inline-block md:inline-block lg:block active:scale-95" 
             variant="default"
             size="xl"
             >
@@ -82,7 +82,7 @@ export default function Home() {
       <p className="mx-auto text-sky-500 text-sm text-center items-center justify-center font-bold">
         WHAT WE DO
       </p>
-      <h2 className="mx-auto mb-6 lg:text-5xl md:text-4xl text-3xl font-bold tracking-tight text-gray-900">
+      <h2 className="mx-auto mb-6 lg:text-5xl md:text-4xl text-3xl font-bold tracking-tight text-gray-900 items-center justify-center">
         Start up. Stack up. Scale up.
       </h2>
       <p className='mx-auto pb-4 items-center justify-center text-center md:max-w-screen-lg'>
@@ -105,7 +105,7 @@ export default function Home() {
     <p className="mx-auto text-sky-500 text-sm text-center font-bold">
       CORE CAPABILITIES
     </p>
-    <h2 className="font-bold mx-auto mt-2 lg:text-5xl md:text-4xl text-3xl tracking-tight text-gray-900">
+    <h2 className="font-bold mx-auto mt-2 lg:text-5xl md:text-4xl text-3xl tracking-tight text-gray-900 text-center">
       Discover services. Delivered seamlessly.
     </h2>
     <p className="mx-auto mt-6 text-gray-700 text-center md:max-w-screen-md">

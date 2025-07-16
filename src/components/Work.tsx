@@ -297,14 +297,17 @@ const triggerConfetti = () => {
             Love this!
             </button>
 
-            <a
-            href="https://buymeacoffee.com/yourlink"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-amber-600 hover:bg-amber-700 text-white font-semibold py-2 px-6 rounded-full shadow transition-all duration-200"
-            >
-            ☕ Buy Us Coffee
-            </a>
+                <a
+                href="#"
+                onClick={(e) => e.preventDefault()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group bg-amber-600 hover:bg-amber-700 text-white font-semibold py-2 px-6 rounded-full shadow transition-all duration-200"
+                >
+                <span className="group-focus:hidden inline">☕</span>
+                <span className="hidden group-focus:inline">🫗</span>
+                Coffee?
+                </a>
             </div>
 
             <div id='work' className="grid grid-cols-auto sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 auto-rows-[200px] grid-auto-flow-dense py-16">

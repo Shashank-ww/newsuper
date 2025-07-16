@@ -79,10 +79,10 @@ const Tabs = () => {
                     e.preventDefault(); // Prevent default action
                     handleTabClick(tab.id); // Handle tab click
                 }}
-                className={`group block max-w-sm mx-auto rounded-lg p-6 ring-1 ring-slate-900/5 space-y-3 ${
+                className={`group block max-w-sm mx-auto rounded-lg p-6 ring-1 ring-slate-900/5 space-y-3 active:scale-95 ${
                     activeTab === tab.id
-                    ? 'bg-blue-500 text-white shadow-lg' // Highlight active tab
-                    : 'bg-zinc-100 text-gray-800 hover:ring-amber-500 ring-2' // Default style for inactive tabs
+                    ? 'bg-blue-500 text-white shadow-lg ' // Highlight active tab
+                    : 'bg-zinc-100 text-gray-800 hover:ring-amber-500 ring-2 hover:shadow-[0_0_10px_2px_rgba(255,255,0,0.6)]' // Default style for inactive tabs
                 }`}
                 >
                 <div className="flex space-x-3">
@@ -91,6 +91,9 @@ const Tabs = () => {
                 </div>
                 <p className="text-sm text-left">{tab.content.text}</p>
                 </button>
+                {activeTab === tab.id && (
+                  <span className="text-blue-500 md:text-xl animate-pulse">&#8681;</span>
+                )}
             </div>
           ))}
         </div>
@@ -105,7 +108,7 @@ const Tabs = () => {
                 alt={`Image for ${activeContent.title}`}
                 width={600}
                 height={600}
-                className="object-contain w-full h-full border-r-2 border-r-blue-300"
+                className="object-contain w-full h-full md:border-r-2 border-r-blue-300"
               />
             </div>
 
@@ -119,14 +122,14 @@ const Tabs = () => {
                   {activeContent.title}
                 </h1>
 
-                <div className="flex items-start gap-3 mt-4">
-                  <div className="mt-1 text-blue-500">{activeContent.svg}</div>
+                <div className="flex gap-3 mt-4 md:items-start items-center justify-center">
+                  <div className="hidden md:block mt-1 text-blue-500">{activeContent.svg}</div>
 
                   <div>
-                    <p className="text-gray-700 leading-relaxed max-w-sm">
+                    <p className="text-gray-700 leading-relaxed">
                       {activeContent.description}
                     </p>
-                    <div className="flex flex-wrap gap-2 mt-6">
+                    <div className="flex flex-wrap gap-2 mt-6 md:items-start items-center justify-center">
                       {activeContent.tags?.map((tag, index) => (
                         <span
                           key={index}

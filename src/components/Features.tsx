@@ -33,8 +33,8 @@ const Features = () => {
     <MaxWidthWrapper>
     <div className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-screen-lg lg:text-center">
-          <h2 className="text-base font-bold leading-7 text-blue-500">UNIFIED THINKING, ONE STUDIO</h2>
+        <div className="mx-auto max-w-screen-lg text-center">
+          <h2 className="text-base font-bold leading-7 text-blue-500">UNIFIED THINKING, ONE MARKETING STUDIO</h2>
           <p className="mt-2 lg:text-5xl md:text-4xl text-3xl font-bold tracking-tight text-gray-900">
            Integrated. Intelligent. Impactful.
           </p>

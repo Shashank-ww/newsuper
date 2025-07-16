@@ -20,33 +20,33 @@ const logos = [
 
 function Poweredby() {
   return (
-    <div className="w-full overflow-hidden py-8">
+    <div className="w-full overflow-hidden py-8 h-full">
       <h2 className="text-center text-sm font-bold text-blue-500 mb-6">
         &mdash;&mdash; POWERED BY &mdash;&mdash;
       </h2>
 
-      <div className="relative w-full overflow-hidden z-0 group"> {/* z-0 for container */}
+      <div className="relative w-full z-0">
 
-        <div className="flex animate-marquee space-x-12 z-0 relative group-hover:[animation-play-state:paused]"> {/* logos behind overlays */}
-          {[...logos, ...logos].map((logo, index) => (
-            <Image
-              key={index}
-              src={logo.src}
-              alt={logo.alt}
-              width={logo.width}
-              height={60}
-              className="transition-transform transform grayscale hover:grayscale-0 hover:scale-105"
-            />
-          ))}
+        <div className="overflow-x-auto whitespace-nowrap md:overflow-hidden">
+          <div className="flex space-x-12 md:animate-marquee md:group-hover:[animation-play-state:paused]">
+            {[...logos, ...logos].map((logo, index) => (
+              <Image
+                key={index}
+                src={logo.src}
+                alt={logo.alt}
+                width={logo.width}
+                height={64}
+                className="transition-transform transform grayscale hover:grayscale-0 active:scale-95 inline-block"
+              />
+            ))}
+          </div>
         </div>
 
-        {/* Left fade overlay */}
+        {/* Fade overlays for large screens only */}
         <div className="pointer-events-none absolute left-0 top-0 h-full w-16 z-10 
-                        bg-gradient-to-r from-white to-transparent" />
-
-        {/* Right fade overlay */}
+                        bg-gradient-to-r from-white to-transparent hidden md:block" />
         <div className="pointer-events-none absolute right-0 top-0 h-full w-16 z-10 
-                        bg-gradient-to-l from-white to-transparent" />
+                        bg-gradient-to-l from-white to-transparent hidden md:block" />
       </div>
     </div>
   );
