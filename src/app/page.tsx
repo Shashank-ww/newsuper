@@ -65,7 +65,7 @@ export default function Home() {
 
    <MaxWidthWrapper>
     <div className="py-20 w-full flex flex-col items-center justify-center">
-    <h2 className="mb-6 lg:text-5xl md:text-4xl text-3xl font-bold tracking-tight text-gray-900"> 
+    <h2 className="mb-6 lg:text-5xl md:text-4xl text-3xl font-bold tracking-tight text-gray-900 items-center justify-center"> 
       Redefine modern media marketing
       </h2>
         <p className="max-w-prose-lg text-center font-medium mb-6">
