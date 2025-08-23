@@ -22,7 +22,7 @@ function Poweredby() {
   return (
     <div className="w-full overflow-hidden py-8 h-full">
       <h2 className="text-center text-sm font-bold text-blue-500 mb-6">
-        &mdash;&mdash; POWERED BY &mdash;&mdash;
+        &lsaquo;&mdash;&mdash; POWERED BY &mdash;&mdash;&rsaquo;
       </h2>
 
       <div className="relative w-full z-0">

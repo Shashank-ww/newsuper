@@ -7,22 +7,31 @@ import TalentGrid from "@/components/TalentGrid";
 const Talent = () => {
     return (
         <>
-        <div className="w-full h-400px relative items-center justify-center" style={{ 
-            backgroundImage: `url("/webimgs/mastheads/side1.png")`, 
-            backgroundSize: "cover", 
-            backgroundPosition: "center 10%",
-        }}>
-            <div className="relative inset-0 bg-white dark:bg-black opacity-70"></div>
-            <MaxWidthWrapper>
-            <div className="mx-auto py-20 min-h-[400px] flex flex-col items-left justify-center">
-            <div className="mx-4 p-2 font-bold text-blue-500 mb-4 md:mr-4 md:mb-0">
-            &#129174; FIND YOUR TALENT
-            </div>
-                <h2 className="mx-4 lg:text-5xl md:text-4xl sm:text-3xl text-2xl font-light mb-4 md:mr-4 md:mb-0 text-accent-foreground">
+        <div
+          className="w-full h-[400px] relative items-center justify-center bg-gradient-to-r from-blue-500 via-slate-400 to-gray-100 lg:bg-none lg:block"
+          style={{
+            backgroundImage: 'none',
+          }}
+        >
+          {/* Image background only on large screens */}
+          <div
+            className="hidden lg:block absolute inset-0 bg-cover bg-[center_10%]"
+            style={{
+              backgroundImage: `url("/webimgs/mastheads/side1.png")`,
+            }}
+          ></div>
+
+
+          <MaxWidthWrapper>
+            <div className="mx-auto py-20 min-h-[400px] flex flex-col items-start justify-center relative z-10">
+              <div className="mx-4 p-2 font-bold text-blue-500 mb-4 md:mr-4 md:mb-0">
+                &#129174; FIND YOUR TALENT
+              </div>
+              <h2 className="mx-4 lg:text-5xl md:text-4xl sm:text-3xl text-2xl font-light mb-4 md:mr-4 md:mb-0 text-accent-foreground">
                 Gateway to World-Class Expertise
-                </h2>
+              </h2>
             </div>
-        </MaxWidthWrapper>
+          </MaxWidthWrapper>
         </div>
 
         <MaxWidthWrapper>

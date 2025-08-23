@@ -5,18 +5,23 @@ import Faqs from "@/components/Faqs";
 import Sectors from "@/components/Sectors";
 import Image from "next/image";
 import Work from "@/components/Work";
+import Features from "@/components/Features";
 
 const Explore = () => {
     return (
         <main className="relative flex flex-col min-h-screen">
-<div className="w-full h-400px relative items-center justify-center" style={{ 
-            backgroundImage: `url("/webimgs/mastheads/side2.png")`, 
-            backgroundSize: "cover", 
-            backgroundPosition: "center 10%",
+        <div className="w-full h-400px relative items-center justify-center bg-gradient-to-tr from-gray-400 via-slate-100 to-gray-700" style={{ 
+            backgroundImage: 'none'
         }}>
-            <div className="relative inset-0 bg-white dark:bg-black opacity-70"></div>
+
+            <div className="hidden lg:block absolute inset-0 bg-cover bg-[center_10%]"
+            style={{ 
+            backgroundImage: `url("/webimgs/mastheads/side2.png")`,
+          }}
+            ></div>
+
             <MaxWidthWrapper>
-            <div className="mx-auto py-20 min-h-[400px] flex flex-col items-left justify-center">
+            <div className="mx-auto py-20 min-h-[400px] flex flex-col items-start justify-center relative z-10">
             <div className="mx-4 p-2 font-bold text-blue-500 mb-4 md:mr-4 md:mb-0">
             &#129174; EXPLORE BUSINESS
             </div>
@@ -27,15 +32,17 @@ const Explore = () => {
         </MaxWidthWrapper>
         </div>
 
+  <Features/>
+
 <MaxWidthWrapper>
       <div id="core" className="py-24 sm:py-16 flex flex-col mx-auto items-center justify-center gap-4">
         <div className="mx-auto max-w-screen-lg text-center">
           <h2 className="text-base font-bold leading-7 text-blue-600">EXPLORE OUR WORK</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Creative marketing and adtech solutions
+          <p className="mt-2 lg:text-5xl md:text-4xl text-3xl font-bold tracking-tight text-gray-900">
+            Marketing that works. Work that wins.
           </p>
-          <p className="mt-6 text-gray-700 max-w-screen-sm mx-auto">
-          Leverage our expertise in media management and technology operations, with unmatched quality content and tailored solutions to meet diverse media execution and marketing needs, driving success and growth for your brand.
+          <p className="mt-6 text-gray-700 mx-auto">
+          We help brands tell their story through smart media management, innovative technology, and high-quality content. Our tailored solutions ensure seamless execution and measurable growth for your business.
           </p>
         </div>
       </div>

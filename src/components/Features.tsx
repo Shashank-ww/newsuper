@@ -3,27 +3,27 @@ import MaxWidthWrapper from '@/components/MaxWidthWrapper';
 
 const features = [
   {
-    name: '360° Campaign Management',
+    name: '360° CAMPAIGN MANAGEMENT',
     description:
-      'We use cloud-based CRM solution that helps us manage customer and client relationship, empowering teams to centralize, organize, and optimize their interactions with clients.',
+      'We plan, run, and track campaigns across channels using smart proprietary tools—keeping client interactions organized and results clear.',
     icon: RectangleGroupIcon,
   },
   {
-    name: 'Dedicated Marketing Teams',
+    name: 'DEDICATED MARKETING SERVICES',
     description:
-      'With a deep understanding of your objectives and unwavering commitment to excellence, our teams seamlessly integrate into your workflow, ensuring optimal results and smooth collaboration.',
+      'An extension of your team. We align with your goals, work seamlessly with your processes, and stay focused on driving outcomes that matter.',
     icon: UserGroupIcon,
   },
   {
-    name: 'Outsource Media Production',
+    name: 'COMMERCIAL POST PRODUCTION',
     description:
-      'Our dedicated team is always on standby to swiftly address any concerns, ensuring minimal disruptions and maximum efficientcy on autonomous projects.',
+      'From videos to digital assets, our in-house production team delivers fast, high-quality content so your projects stay on track without delays.',
     icon: BoltIcon,
   },
   {
-    name: 'Reporting and Marketing Trends',
+    name: 'REAL-TIME REPORTING',
     description:
-      'From monitoring key metrics to identifying trends as they happen, with real-time reporting you can make informed decision and stay ahead of competition.',
+      'We provide live dashboards and reports, helping you see what is working, spot new opportunities, and stay ahead of competitors.',
     icon: PresentationChartLineIcon,
   },
 ]
@@ -46,7 +46,7 @@ const Features = () => {
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
             {features.map((feature) => (
               <div key={feature.name} className="relative pl-16">
-                <dt className="text-base font-semibold leading-7 text-gray-900">
+                <dt className="text-sm font-bold leading-7 text-gray-900">
                   <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600">
                     <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
                   </div>

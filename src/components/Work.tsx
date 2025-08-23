@@ -240,9 +240,7 @@ const triggerConfetti = () => {
     const confetti = document.createElement("div");
     confetti.innerText = ["🎉", "✨", "💥", "🌟", "💫", "❤️", "💛"][Math.floor(Math.random() * 7)];
 
-    confetti.className = `
-      fixed z-50 text-xl animate-float pointer-events-none
-    `;
+    confetti.className = `fixed z-50 text-xl animate-float pointer-events-none`;
 
     confetti.style.left = `${Math.random() * 100}vw`;
     confetti.style.top = `${Math.random() * 100}vh`;
@@ -292,8 +290,8 @@ const triggerConfetti = () => {
             onClick={() => triggerConfetti()}
             className="group border text-black font-semibold py-2 px-6 rounded-full shadow transition-all duration-200 active:scale-95 focus:ring-2 focus:ring-yellow-300 focus:bg-yellow-400 hover:border-yellow-400 hover:shadow-[0_0_10px_2px_rgba(255,255,0,0.6)]">
             {totalLikes}{" "}
-            <span className="group-hover:hidden inline">💛</span>
-            <span className="hidden group-hover:inline">❤️</span>
+            <span className="group-hover:hidden inline">💛 </span>
+            <span className="hidden group-hover:inline">❤️ </span>
             Love this!
             </button>
 
@@ -302,10 +300,10 @@ const triggerConfetti = () => {
                 onClick={(e) => e.preventDefault()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group bg-amber-600 hover:bg-amber-700 text-white font-semibold py-2 px-6 rounded-full shadow transition-all duration-200"
+                className="group hover:bg-amber-700 hover:text-white font-semibold py-2 px-6 rounded-full border border:ring-amber-200 shadow transition-all duration-200"
                 >
-                <span className="group-focus:hidden inline">☕</span>
-                <span className="hidden group-focus:inline">🫗</span>
+                <span className="group-focus:hidden inline">☕ </span>
+                <span className="hidden group-focus:inline">🫗 </span>
                 Coffee?
                 </a>
             </div>

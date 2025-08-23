@@ -65,7 +65,7 @@ export default function Home() {
 
    <MaxWidthWrapper>
     <div className="py-20 w-full flex flex-col items-center justify-center">
-    <h2 className="mb-6 lg:text-5xl md:text-4xl text-3xl font-bold tracking-tight text-gray-900 items-center justify-center"> 
+    <h2 className="mb-6 lg:text-5xl md:text-4xl text-3xl font-bold tracking-tight text-gray-900 items-center justify-center text-center"> 
       Redefine modern media marketing
       </h2>
         <p className="max-w-prose-lg text-center font-medium mb-6">
@@ -82,7 +82,7 @@ export default function Home() {
       <p className="mx-auto text-sky-500 text-sm text-center items-center justify-center font-bold">
         WHAT WE DO
       </p>
-      <h2 className="mx-auto mb-6 lg:text-5xl md:text-4xl text-3xl font-bold tracking-tight text-gray-900 items-center justify-center">
+      <h2 className="mx-auto mb-6 lg:text-5xl md:text-4xl text-3xl font-bold tracking-tight text-gray-900 items-center justify-center text-center">
         Start up. Stack up. Scale up.
       </h2>
       <p className='mx-auto pb-4 items-center justify-center text-center md:max-w-screen-lg'>
@@ -106,7 +106,7 @@ export default function Home() {
       CORE CAPABILITIES
     </p>
     <h2 className="font-bold mx-auto mt-2 lg:text-5xl md:text-4xl text-3xl tracking-tight text-gray-900 text-center">
-      Discover services. Delivered seamlessly.
+      Marketing services. Marketed seamlessly.
     </h2>
     <p className="mx-auto mt-6 text-gray-700 text-center md:max-w-screen-md">
       The belief we follow, the work we do, the brands we use, the bread we eat, everything revolves around the decisions we make. Discover how our services can maximize digital excellence in your connected world.
