@@ -48,8 +48,6 @@ const Talent = () => {
           </div>
         </MaxWidthWrapper>
 
-        <TalentGrid/>
-
 {/* Top Highlights */}
 
         <MaxWidthWrapper>
@@ -129,6 +127,8 @@ const Talent = () => {
         </div>
 </MaxWidthWrapper>
     </div>
+
+<TalentGrid/>
 
 {/* Talent Propositions */}
 

@@ -35,7 +35,7 @@ const Footer = () => {
             </div>
             
             <p className='py-4 w-[80%] text-xs'>
-            Outsource marketting production and media tech ops with our niche supersqads.
+            Outsource marketing production and media tech ops with our niche supersqads.
             </p>
            <div className='flex justify-start py-4 gap-4 md:w[50% my-4]'>
                 <SlSocialGoogle size={20} />
@@ -46,8 +46,8 @@ const Footer = () => {
             </div>
             <div className='text-slate-300 hidden lg:block mt-4'>
                 Technical Info:
-          <p className='text-xs'>pre-build:21.2 rv7.7</p>
-          <p className='text-xs'>v7.79 w.d:42.6</p>
+          <p className='text-xs'>pre-build:25.8 rv27.7</p>
+          <p className='text-xs'>v27.7 w.d:43.6</p>
           </div>
         </div>
         <div className='flex lg:grid-cols-2 gap-8 justify-items-center'>
