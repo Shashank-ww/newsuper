@@ -11,6 +11,7 @@ import Poweredby from "@/components/Poweredby";
 import Tabs from "@/components/Tabs";
 import Features from "@/components/Features";
 import Testimonials from "@/components/Testimonials";
+import WorkPreview from "@/components/WorkPreview";
 
 export default function Home() {
 
@@ -97,6 +98,8 @@ export default function Home() {
     <Tabs/>
 
     <Features/>
+
+    <WorkPreview/>
 
     <Brands/>
 

@@ -59,7 +59,7 @@ export default {
 		keyframes: {
         marquee: {
           '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-60%)' },
+          '100%': { transform: 'translateX(-50%)' },
         },
 		confettiPop: {
 		'0%': { transform: 'scale(0.5)', opacity: '0' },

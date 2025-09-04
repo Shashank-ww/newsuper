@@ -18,11 +18,12 @@ const TalentGrid = () => {
     <div className="max-w-screen-xl mx-auto py-12 grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-4">
       {/* Left Talent Tabs */}
       <div className="space-y-2">
+        <h2 className='font-bold text-sm text-gray-800 pb-4'>OUR TALENT CATEGORIES</h2>
       {Talents.map((Talent) => (
         <div key={Talent} className="mb-1 hover:bg-gray-200"> {/* Wrapper div for spacing */}
             <button
             onClick={() => setActiveTalent(Talent)}
-            className={`w-full text-left p-4 rounded-s
+            className={`w-full text-left p-2 rounded-s
                 ${activeTalent === Talent 
                 ? 'bg-blue-500 text-white' 
                 : 'bg-transparent text-gray-800'

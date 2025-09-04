@@ -20,7 +20,7 @@ const About = () => {
         }}></div>
 
         {/* About Us */}
-        <div className="lg:sticky absolute top-64 px-2.5 flex items-center justify-center cursor-default w-full">
+        <div className="lg:sticky absolute top-44 px-2.5 flex items-center justify-center cursor-default w-full">
         <div className="pb-4 flex flex-col z-1 text-center max-w-4xl mx-auto">
           <p className="underline underline-offset-4 font-bold">ABOUT US</p>
           <h1 className="tracking-tight font-bold py-4 lg:text-6xl md:text-5xl text-4xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-sky-400 hover:from-amber-500 hover:to-yellow-500 transition-colors duration-700">The Supersqad <span className="font-normal">story</span>
@@ -37,13 +37,13 @@ const About = () => {
             <div className="px-4 mt-4 font-bold text-blue-500 md:mb-0 md:max-w-screen-md items-center justify-center mx-auto">
               OUR MISSION & VISION
             </div>
-            <h2 className="px-4 py-2 mb-4 lg:text-4xl md:max-w-screen-md mx-auto md:text-3xl text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <h2 className="px-2 py-2 mb-4 lg:text-4xl md:max-w-screen-md mx-auto md:text-3xl text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                Brevity, integrity and wit </h2>
-            <div className="md:max-w-screen-md items-center justify-center mx-auto text-gray-800">
+            <div className="max-w-full md:max-w-screen-md items-center justify-center mx-auto text-gray-800">
               <ul> 
                 <li className="py-2">We are Supersqad studios, the creative and technology trailblazers of the future.
                   </li>
-                <li className="py-2">With over hundreds of projects rescued from the jaws of failure, we are not just rewriting the rules of media production and technology – we are redefining what it means to succeed in the digital realms of life.
+                <li className="py-2">With over hundreds of projects created from scratch, we are not just rewriting the rules of media production and technology – we are redefining what it means to succeed in the digital realms of life.
                   </li>  
                 <li className="py-2">And here&apos;s a kicker – our mission goes way beyond digital; <span className="font-bold"> we are in it to make real-world impact.</span>
                   </li>
@@ -161,7 +161,7 @@ const About = () => {
       </div>
     <div className="w-full lg:h-auto bg-cover bg-center rounded-lg" 
       style={{ 
-      backgroundImage: "url('https://images.unsplash.com/photo-1634838872223-92ca3d20a927')", 
+      backgroundImage: "url('https://images.unsplash.com/photo-1689185008971-12e131e1a64a')", 
       backgroundSize: "cover", 
       backgroundPosition: "center" 
       }}>

@@ -39,7 +39,7 @@ const Talent = () => {
             <div className="mx-auto max-w-screen-md text-center">
               <h2 className="text-base font-bold leading-7 text-blue-600">TALENT SUPERSQAD</h2>
               <h1 className="mt-2 lg:text-4xl text-3xl font-bold tracking-tight text-gray-900">
-              Custom squad with niche skillset
+              Meet our squad with niche skillset
               </h1>
               <p className="mt-6 text-gray-700">
               We offer scalable and flexible media and tech squads who can tackle in-house challenges such as resource constraints, seasonal workload fluctuations, and a shortage of specialized expertise in media agencies, corporate, IT hubs and healthcare groups.
@@ -88,7 +88,7 @@ const Talent = () => {
               </div>
         </MaxWidthWrapper>
 
-<div className="bg-gray-800 text-white flex flex-col items-center justify-center sm:flex-row">                   
+<div className="bg-gray-700 text-white flex flex-col items-center justify-center sm:flex-row">                   
      <MaxWidthWrapper>
       <div className="flex flex-col md:flex-row px-8 items-center justify-evenly">
       <div className="p-4 cursor-default transition-transform duration-300 rounded-sm shadow-md hover:scale-110 hover:bg-gray-900">
