@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import MaxWidthWrapper from './MaxWidthWrapper';
 import Image from 'next/image';
-import { workItems, WorkItem } from "@/data/workData";
+import { workItems } from "@/data/workData";
 
 const Work = () => {
   const [likes, setLikes] = useState<number[]>([]);
