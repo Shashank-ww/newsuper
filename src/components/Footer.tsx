@@ -20,12 +20,37 @@ const Footer = () => {
             <Link href="/">
                     <div className="flex items-center cursor-pointer">
                         <div className="FooterLogo">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="48" height="48">
-                            <polygon points="402.65 269 312.65 269 327.96 197 237.96 197 222.65 269 207.35 341 297.35 341 282.04 413 372.04 413 387.35 341 402.65 269" fill="#06f"/>
-                            <polygon points="433.26 125 343.26 125 253.26 125 163.26 125 147.96 197 132.65 269 117.35 341 102.04 413 86.74 485 176.74 485 266.74 485 356.74 485 372.04 413 282.04 413 297.35 341 207.35 341 222.65 269 237.96 197 327.96 197 312.65 269 402.65 269 387.35 341 372.04 413 462.04 413 477.35 341 492.65 269 507.96 197 523.26 125 433.26 125" fill="#06f"/>
-                            <polyline points="372.04 413 387.35 341 402.65 269 312.65 269 327.96 197 237.96 197 222.65 269 207.35 341 297.35 341 282.04 413 372.04 413" fill="#fff"/>
-                            <polygon points="372.04 413 462.04 413 446.74 485 356.74 485 372.04 413" fill="none"/>
-                            </svg>
+                                              <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 1000 1000"
+                    width="48"
+                    height="48"
+                  >
+                    <defs>
+                      <radialGradient
+                        id="a"
+                        cx="708.08"
+                        cy="303.55"
+                        r="430.34"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop offset="0" stopColor="#0a99ff" />
+                        <stop offset="1" stopColor="#0042e9" />
+                      </radialGradient>
+                    </defs>
+
+                    {/* Background */}
+                    <rect x={0} y={-5} width={600} height={1010} fill="none" />
+
+                    {/* Gradient logo */}
+                    <polygon
+                      points="788.1 349.63 688.13 750.61 562.82 750.61 637.8 449.88
+                              512.5 449.88 537.49 349.63 412.19 349.63 362.2 550.12
+                              487.5 550.12 462.51 650.37 211.9 650.37 311.87 249.39
+                              687.79 249.39 662.8 349.63 788.1 349.63"
+                      fill="url(#a)"
+                    />
+                  </svg>
                         </div>
                         <div className='font-black text-lg tracking-tight cursor-pointer text-transparent bg-gradient-to-l from-zinc-700 to-slate-800 bg-clip-text transition ease-in-out duration-300 hover:from-blue-500 hover:to-sky-600'>
                             <i className="pr-2">SUPERSQAD.COM</i> 
