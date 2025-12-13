@@ -5,7 +5,8 @@ export type TalentCategory =
   | "ProductManagers"
   | "MarketingExperts"
   | "Producers"
-  | "VirtualAssistant";
+  | "VirtualAssistant"
+  | "DataScientist";
 
 /**
  * Runtime array of categories
@@ -18,6 +19,7 @@ export const TalentCategories: TalentCategory[] = [
   "MarketingExperts",
   "Producers",
   "VirtualAssistant",
+  "DataScientist",
 ];
 
 /**
@@ -165,6 +167,18 @@ export const profileData: Profile[] = [
     lastWorkedAt: "RemoteCo",
     experience: 3,
     verified: true,
+    image: "",
+    category: "VirtualAssistant",
+  },
+    {
+    id: "va-3",
+    name: "Taylor Swift",
+    role: "Virtual Assistant",
+    rate: 250,
+    expertise: ["Calendar Management", "Email Support", "Data Entry"],
+    lastWorkedAt: "RemoteCo",
+    experience: 3.2,
+    verified: false,
     image: "",
     category: "VirtualAssistant",
   },

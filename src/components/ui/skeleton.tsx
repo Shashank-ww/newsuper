@@ -16,14 +16,14 @@ export const Skeleton: React.FC<SkeletonProps> = ({ className }) => {
       )}
     >
       {/* Optional: left-to-right shimmer effect */}
-      <div className="absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-300 to-gray-400 opacity-50 animate-[shimmer_1.5s_infinite]"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-gray-100 via-amber-300 to-blue-400 opacity-50 animate-[shimmer_1s_infinite]"></div>
       <style jsx>{`
         @keyframes shimmer {
           0% { transform: translateX(-100%); }
           100% { transform: translateX(100%); }
         }
-        .animate-[shimmer_1.5s_infinite] {
-          animation: shimmer 1.5s infinite;
+        .animate-[shimmer_2.5s_infinite] {
+          animation: shimmer 2.5s infinite;
         }
       `}</style>
     </div>

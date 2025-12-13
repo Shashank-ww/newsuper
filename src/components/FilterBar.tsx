@@ -10,6 +10,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import type { TalentFilter } from "@/data/profiles";
+import MaxWidthWrapper from "./MaxWidthWrapper";
 
 interface Props {
   talents: readonly TalentFilter[];
@@ -27,7 +28,8 @@ export default function FilterBar({
   setVerifiedOnly,
 }: Props) {
   return (
-    <div className="sticky top-16 z-40 bg-white border-b border-gray-200 h-16 flex items-center px-4 gap-4 flex-wrap">
+    <div className= "py-4 sticky top-16 z-40 bg-white border-b border-gray-200 h-16">
+    <div className="flex items-center px-4 gap-4 flex-wrap">
       {/* Talent Filter */}
       <Select
         value={activeTalent}
@@ -52,17 +54,18 @@ export default function FilterBar({
       </Select>
 
       {/* Verified */}
-      <div className="flex items-center gap-2">
-        <Checkbox
-          checked={verified}
-          onCheckedChange={(v) => setVerifiedOnly(!!v)}
-        />
-        <span className="text-sm">Verified only</span>
-      </div>
+        <label className="flex items-center gap-2 cursor-pointer">
+          <Checkbox
+            checked={verified}
+            onCheckedChange={(v) => setVerifiedOnly(!!v)}
+          />
+          <span className="text-sm">Verified only</span>
+        </label>
+
 
       {/* Reset Button */}
       <Button
-        variant="ghost"
+        variant="link"
         size="sm"
         onClick={() => {
           setActiveTalent("All");
@@ -71,6 +74,7 @@ export default function FilterBar({
       >
         Reset
       </Button>
+    </div>
     </div>
   );
 }

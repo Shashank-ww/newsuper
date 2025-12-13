@@ -12,6 +12,7 @@ import Tabs from "@/components/Tabs";
 import Features from "@/components/Features";
 import Testimonials from "@/components/Testimonials";
 import WorkPreview from "@/components/WorkPreview";
+import SupersqadSignal from "@/components/Threewords";
 
 export default function Home() {
 
@@ -93,6 +94,7 @@ export default function Home() {
    </MaxWidthWrapper>
       <Tabs/>
       <Features/>
+            <SupersqadSignal/>
       <WorkPreview/>
       <Brands/>
       <MaxWidthWrapper>

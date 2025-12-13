@@ -40,7 +40,7 @@ const Footer = () => {
                     </defs>
 
                     {/* Background */}
-                    <rect x={0} y={-5} width={600} height={1010} fill="none" />
+                    <rect x={-5} y={-5} width={1010} height={1010} fill="none" />
 
                     {/* Gradient logo */}
                     <polygon

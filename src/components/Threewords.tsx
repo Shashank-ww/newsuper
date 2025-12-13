@@ -24,7 +24,7 @@ export default function SupersqadSignal() {
       setSignal(res.phrase);
       setWords(res.words);
       setDefs(res.defs);
-      setShowDefs(false);
+      // setShowDefs(false);
       setHistory((prev) => [res.phrase, ...prev].slice(0, 5));
     });
   };
@@ -43,13 +43,13 @@ export default function SupersqadSignal() {
       <div className="grid md:grid-cols-2 gap-10">
         {/* LEFT: Signal & Controls */}
         <div className="space-y-4">
-          <p className="text-sm font-medium uppercase tracking-wide text-muted-foreground">
+          <p className="text-sm font-medium uppercase tracking-wide text-muted-foreground cursor-default">
             Supersqad Signals
           </p>
 
           {/* Signal Display */}
           <div
-            className={`flex items-center gap-3 px-4 py-3 border rounded-md transition-all duration-500 ${
+            className={`relative group flex items-center gap-3 px-4 py-3 border rounded-md transition-all duration-500 ${
               copiedFlash ? "bg-amber-100 border-sky-400" : ""
             }`}
           >
@@ -83,6 +83,11 @@ export default function SupersqadSignal() {
               </button>
             )}
           </div>
+                                    {/* Info Tooltip
+    <span className="absolute mt-1 w-max max-w-xs text-xs text-yellow-900 bg-yellow-200 bg-opacity-80 px-2 py-1 rounded opacity-0 pointer-events-none transition-opacity duration-200 group-hover:opacity-100">
+      Your brand signals! Boost marketing with us, copy and paste this on 
+      what3words to see if it takes you anywhere.
+    </span> */}
 
           {/* Buttons Row */}
           <div className="flex justify-between items-center">
@@ -97,6 +102,16 @@ export default function SupersqadSignal() {
               {isPending ? "Generating..." : "Generate"}
             </Button>
 
+            {/* Show/Hide history */}
+            {history.length > 1 && (
+              <button
+                onClick={() => setShowHistory(!showHistory)}
+                className="text-xs text-blue-500 underline"
+              >
+                {showHistory ? "Hide history" : "Show history"}
+              </button>
+            )}
+
             {/* Show/Hide meanings */}
             {defs.length > 0 && (
               <button
@@ -105,16 +120,6 @@ export default function SupersqadSignal() {
               >
                 {showDefs ? <FiBookOpen /> : <FiBook />}
                 {showDefs ? "Hide meanings" : "Show meanings"}
-              </button>
-            )}
-
-            {/* Show/Hide history */}
-            {history.length > 1 && (
-              <button
-                onClick={() => setShowHistory(!showHistory)}
-                className="text-xs text-blue-500 underline"
-              >
-                {showHistory ? "Hide history" : "Show history"}
               </button>
             )}
           </div>

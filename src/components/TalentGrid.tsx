@@ -15,6 +15,7 @@ import { Drawer } from "@/components/ui/drawer";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
+import { FiAlertCircle } from "react-icons/fi";
 
 const TalentGrid = () => {
   const [activeTalent, setActiveTalent] = useState<TalentFilter>("All");
@@ -55,25 +56,29 @@ const TalentGrid = () => {
 
       {/* Profile list */}
       <div className="max-w-screen-xl mx-auto px-4 py-6 space-y-3">
-        {loading
-          ? Array.from({ length: 4 }).map((_, i) => (
-              <Skeleton key={i} className="h-28 w-full rounded-lg" />
-            ))
-          : visibleProfiles.map((profile) => (
-              <ProfileFeedRow
-                key={profile.id}
-                profile={profile}
-                onViewProfile={() => {
-                  setSelectedProfile(profile);
-                  setDrawerOpen(true);
-                }}
-              />
-            ))}
-
-        {!loading && visibleProfiles.length === 0 && (
-          <p className="text-sm text-muted-foreground">
-            No profiles found for this category.
-          </p>
+        {loading ? (
+          Array.from({ length: 3 }).map((_, i) => (
+            <Skeleton key={i} className="h-24 w-full rounded-lg" />
+          ))
+        ) : visibleProfiles.length > 0 ? (
+          visibleProfiles.map((profile) => (
+            <ProfileFeedRow
+              key={profile.id}
+              profile={profile}
+              onViewProfile={() => {
+                setSelectedProfile(profile);
+                setDrawerOpen(true);
+              }}
+            />
+          ))
+        ) : (
+          // Empty state when no profiles in category
+          <div className="flex flex-col items-center justify-center py-12 text-destructive space-y-2">
+            <FiAlertCircle size={36} />
+            <p className="text-sm text-center">
+              There are no profiles in <strong>{activeTalent}</strong> category yet.
+            </p>
+          </div>
         )}
       </div>
 
@@ -122,7 +127,8 @@ const TalentGrid = () => {
                   <strong>Last Worked At:</strong> {selectedProfile.lastWorkedAt}
                 </p>
                 <p>
-                  <strong>Expertise:</strong> {selectedProfile.expertise.join(", ")}
+                  <strong>Expertise:</strong>{" "}
+                  {selectedProfile.expertise.join(", ")}
                 </p>
               </div>
 
