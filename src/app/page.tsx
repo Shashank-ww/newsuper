@@ -90,7 +90,7 @@ export default function Home() {
         We help brands make confident marketing decisions through tailored media strategies and quality content execution.
         <br/>
         <br/>
-        Unlike big agencies bound by conflicts of interest and top-down directives, we&apos;re proudly independent—focused solely on delivering smart, unbiased, and impactful results for our clients. Driven by truth, well told.
+        Unlike big agencies bound by top-down directives and conflict of interests, we&apos;re proudly independent—focused solely on delivering smart, unbiased, and impactful results for our clients. Driven by truth, well told.
       </p>
     </div>
 </MaxWidthWrapper>

@@ -2,6 +2,7 @@
 
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import Blog from "../blog/page";
+import ThreeWords from "@/components/Threewords";
 
 const Resources = () => {
     return (
@@ -25,6 +26,9 @@ const Resources = () => {
                 </div>
 
 <MaxWidthWrapper>
+            <MaxWidthWrapper>
+            <ThreeWords/>
+        </MaxWidthWrapper>
 <Blog/>
 </MaxWidthWrapper>
 
@@ -62,6 +66,7 @@ const Resources = () => {
                     Jobs 
                     
         </MaxWidthWrapper>
+
         </main>
     );
 };
