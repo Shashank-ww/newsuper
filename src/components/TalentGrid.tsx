@@ -1,61 +1,92 @@
-// TalentGrid.tsx
-"use client"
+"use client";
 
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { profileData, Talents } from '@/data/profiles'; // Ensure this path is correct
-import ProfileCard from '@/components/ProfileCard'; // Ensure this path is correct
-import MaxWidthWrapper from '@/components/MaxWidthWrapper';
+import React, { useState, useEffect } from "react";
+import { Profile, profileData, Talents } from "@/data/profiles";
+import MaxWidthWrapper from "@/components/MaxWidthWrapper";
+import ProfileFeedRow from "@/components/ProfileFeedRow";
+import FilterBar from "@/components/FilterBar";
+import { Skeleton } from "@/components/ui/skeleton";
+import { Drawer } from "@/components/ui/drawer"; // Your installed drawer
 
 const TalentGrid = () => {
-  const [activeTalent, setActiveTalent] = useState<typeof Talents[number]>(Talents[0]); // Default to the first talent
+  const [activeTalent, setActiveTalent] = useState<string>("All");
+  const [visibleProfiles, setVisibleProfiles] = useState<Profile[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [verifiedOnly, setVerifiedOnly] = useState<boolean>(false);
 
-  // Get the profile data based on the active talent
-  const activeProfiles = profileData[activeTalent]; // This should return an array of profiles
+  // Drawer state
+  const [selectedProfile, setSelectedProfile] = useState<Profile | null>(null);
+  const [drawerOpen, setDrawerOpen] = useState<boolean>(false);
+
+  // Filter profiles based on talent and verified
+  useEffect(() => {
+    setLoading(true);
+
+    const timer = setTimeout(() => {
+      const filtered: Profile[] = profileData.filter((p) => {
+        const talentMatch = activeTalent === "All" || p.category === activeTalent;
+        const verifiedMatch = !verifiedOnly || p.verified;
+        return talentMatch && verifiedMatch;
+      });
+
+      setVisibleProfiles(filtered);
+      setLoading(false);
+    }, 300);
+
+    return () => clearTimeout(timer);
+  }, [activeTalent, verifiedOnly]);
+
+  // Handler for opening drawer
+  const handleViewProfile = (profile: Profile) => {
+    setSelectedProfile(profile);
+    setDrawerOpen(true);
+  };
 
   return (
     <MaxWidthWrapper>
-    <div className="max-w-screen-xl mx-auto py-12 grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-4">
-      {/* Left Talent Tabs */}
-      <div className="space-y-2">
-        <h2 className='font-bold text-sm text-gray-800 pb-4'>OUR TALENT CATEGORIES</h2>
-      {Talents.map((Talent) => (
-        <div key={Talent} className="mb-1 hover:bg-gray-200"> {/* Wrapper div for spacing */}
-            <button
-            onClick={() => setActiveTalent(Talent)}
-            className={`w-full text-left p-2 rounded-s
-                ${activeTalent === Talent 
-                ? 'bg-blue-500 text-white' 
-                : 'bg-transparent text-gray-800'
-                }`}
-            >
-            {Talent.replace(/([A-Z])/g, ' $1').trim()} {/* Adding space before uppercase letters */}
-            <span>&#10509;</span>
-            </button>
-            <div className="border-b border-slate-100/90 w-full"></div> {/* Border separator */}
-        </div>
-        ))}
-        <p className="text-xs p-4 text-gray-600">
-          <span className='font-semibold'>Please Note: </span>If you are an applicant looking to get featured, please {' '}
-          <Button variant="link" className="inline text-xs -p-4">
-            Submit Application
-          </Button>
-        </p>
+      {/* Sticky Filter Bar */}
+      <FilterBar
+        activeTalent={activeTalent}
+        setActiveTalent={setActiveTalent}
+        talents={Talents}
+        verified={verifiedOnly}
+        setVerifiedOnly={setVerifiedOnly}
+      />
+
+      {/* Profile Feed */}
+      <div className="max-w-screen-xl mx-auto px-4 py-6 space-y-3">
+        {loading
+          ? Array.from({ length: 4 }).map((_, idx) => (
+              <Skeleton key={idx} className="h-28 rounded-lg w-full animate-pulse" />
+            ))
+          : visibleProfiles.map((profile) => (
+              <ProfileFeedRow
+                key={profile.id}
+                profile={profile}
+                onViewProfile={() => handleViewProfile(profile)}
+              />
+            ))}
+
+        {!loading && visibleProfiles.length === 0 && (
+          <p className="text-sm text-muted-foreground">
+            No profiles found for this category.
+          </p>
+        )}
       </div>
 
-      {/* Right Profile Cards */}
-      <div className="grid grid-cols-2 md:grid-cols-3 sm:grid-cols-1 gap-4">
-        {activeProfiles.map((profile) => (
-          <ProfileCard key={profile.name} profiles={[profile]}>
-            {/* Children - Buttons */}
-            <div className="flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-2">
-                <Button variant={'default'} className="w-full">Hire Now</Button>
-                <Button variant={'link'} className="w-full">View Profile</Button>
-            </div>
-          </ProfileCard>
-        ))}
-      </div>
-    </div>
+      {/* Profile Drawer */}
+      {selectedProfile && (
+        <Drawer open={drawerOpen} onClose={() => setDrawerOpen(false)}>
+          <div className="p-4 space-y-3">
+            <h2 className="text-lg font-semibold">{selectedProfile.name}</h2>
+            <p><strong>Role:</strong> {selectedProfile.role}</p>
+            <p><strong>Rate:</strong> ₹{selectedProfile.rate}/hr</p>
+            <p><strong>Experience:</strong> {selectedProfile.experience} yrs</p>
+            <p><strong>Last Worked At:</strong> {selectedProfile.lastWorkedAt}</p>
+            <p><strong>Expertise:</strong> {selectedProfile.expertise.join(", ")}</p>
+          </div>
+        </Drawer>
+      )}
     </MaxWidthWrapper>
   );
 };
