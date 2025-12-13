@@ -10,7 +10,6 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import type { TalentFilter } from "@/data/profiles";
-import MaxWidthWrapper from "./MaxWidthWrapper";
 
 interface Props {
   talents: readonly TalentFilter[];
