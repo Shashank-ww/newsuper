@@ -1,3 +1,4 @@
+// src/components/TalentGrid.tsx
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -7,6 +8,9 @@ import ProfileFeedRow from "@/components/ProfileFeedRow";
 import FilterBar from "@/components/FilterBar";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Drawer } from "@/components/ui/drawer"; // Your installed drawer
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { X } from "lucide-react";
 
 const TalentGrid = () => {
   const [activeTalent, setActiveTalent] = useState<string>("All");
@@ -36,10 +40,15 @@ const TalentGrid = () => {
     return () => clearTimeout(timer);
   }, [activeTalent, verifiedOnly]);
 
-  // Handler for opening drawer
+  // Handler to open drawer
   const handleViewProfile = (profile: Profile) => {
     setSelectedProfile(profile);
     setDrawerOpen(true);
+  };
+
+  // Handler to close drawer
+  const closeDrawer = () => {
+    setDrawerOpen(false);
   };
 
   return (
@@ -75,17 +84,66 @@ const TalentGrid = () => {
       </div>
 
       {/* Profile Drawer */}
-      {selectedProfile && (
-        <Drawer open={drawerOpen} onClose={() => setDrawerOpen(false)}>
-          <div className="p-4 space-y-3">
-            <h2 className="text-lg font-semibold">{selectedProfile.name}</h2>
-            <p><strong>Role:</strong> {selectedProfile.role}</p>
-            <p><strong>Rate:</strong> ₹{selectedProfile.rate}/hr</p>
-            <p><strong>Experience:</strong> {selectedProfile.experience} yrs</p>
-            <p><strong>Last Worked At:</strong> {selectedProfile.lastWorkedAt}</p>
-            <p><strong>Expertise:</strong> {selectedProfile.expertise.join(", ")}</p>
-          </div>
-        </Drawer>
+      {selectedProfile && drawerOpen && (
+        <>
+          {/* Backdrop */}
+          <div
+            className="fixed inset-0 bg-black bg-opacity-40 z-40"
+            onClick={closeDrawer}
+          />
+
+          <Drawer open={drawerOpen} onClose={closeDrawer}>
+            <div
+              className={`fixed top-0 right-0 z-50 h-full w-96 bg-white shadow-xl transform transition-transform duration-300 ease-in-out
+                ${drawerOpen ? "translate-x-0" : "translate-x-full"}`}
+            >
+              {/* Close button */}
+              <div className="flex justify-end p-4">
+                <button onClick={closeDrawer} className="p-1 rounded-full hover:bg-gray-200">
+                  <X className="w-5 h-5 text-gray-700" />
+                </button>
+              </div>
+
+              {/* Content */}
+              <div className="p-6 space-y-4">
+                <div className="flex flex-col items-center">
+                  <Image
+                    src={selectedProfile?.image || "/webimgs/avatars/profiles/default.png"}
+                    alt={selectedProfile?.name}
+                    width={96}
+                    height={96}
+                    className="rounded-full object-cover mb-2"
+                  />
+                  <h2 className="text-xl font-bold">{selectedProfile?.name}</h2>
+                  <p className="text-sm text-gray-600">{selectedProfile?.role}</p>
+                </div>
+
+                <div className="space-y-2 text-sm text-gray-700">
+                  <p><strong>Rate:</strong> ₹{selectedProfile?.rate}/hr</p>
+                  <p><strong>Experience:</strong> {selectedProfile?.experience} yrs</p>
+                  <p><strong>Last Worked At:</strong> {selectedProfile?.lastWorkedAt}</p>
+                  <p><strong>Expertise:</strong> {selectedProfile?.expertise.join(", ")}</p>
+                </div>
+
+                <div className="mt-4 flex gap-3">
+                  <Button className="flex-1">Hire Now</Button>
+                  <Button
+                    variant="secondary"
+                    className="flex-1"
+                    onClick={() => alert("Send message")}
+                  >
+                    Send Message
+                  </Button>
+                </div>
+                <Button className="w-full"
+                variant={"outline"}
+                onClick={closeDrawer}>
+                  Close
+                </Button>
+              </div>
+            </div>
+          </Drawer>
+        </>
       )}
     </MaxWidthWrapper>
   );

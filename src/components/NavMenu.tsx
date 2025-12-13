@@ -1,9 +1,7 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import Link from "next/link"
-
-import { cn } from "@/lib/utils"
+import * as React from "react";
+import { cn } from "@/lib/utils";
 
 import {
   NavigationMenu,
@@ -13,8 +11,8 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu"
-import { AiFillCodeSandboxCircle } from "react-icons/ai"
+} from "@/components/ui/navigation-menu";
+import { AiFillCodeSandboxCircle } from "react-icons/ai";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -50,50 +48,52 @@ const components: { title: string; href: string; description: string }[] = [
   {
     title: "Engineering R&D",
     href: "/services/digital#engineering-rnd",
-    description: "Innovate with advanced research and development strategies to push your business ahead.",
+    description:
+      "Innovate with advanced research and development strategies to push your business ahead.",
   },
-]
+];
 
-export function NavMenu () {
+export function NavMenu() {
   return (
     <NavigationMenu>
       <NavigationMenuList>
+        {/* Top-level Links */}
         <NavigationMenuItem>
-        <Link href="/about" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+          <NavigationMenuLink asChild>
+            <a href="/about" className={navigationMenuTriggerStyle()}>
               About
-            </NavigationMenuLink>
-          </Link>
+            </a>
+          </NavigationMenuLink>
         </NavigationMenuItem>
+
         <NavigationMenuItem>
-          <Link href="/talent" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+          <NavigationMenuLink asChild>
+            <a href="/talent" className={navigationMenuTriggerStyle()}>
               Talent
-            </NavigationMenuLink>
-          </Link>
+            </a>
+          </NavigationMenuLink>
         </NavigationMenuItem>
+
+        {/* Explore Dropdown */}
         <NavigationMenuItem>
-        <Link href="/explore" legacyBehavior passHref>
           <NavigationMenuTrigger>Explore</NavigationMenuTrigger>
-          </Link>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
-                  <Link
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-blue-100/50 to-yellow-50 p-6 no-underline outline-none focus:shadow-md"
+                  <a
                     href="/"
+                    className="flex h-full w-full flex-col justify-end rounded-md bg-gradient-to-b from-blue-100/50 to-yellow-50 p-6 no-underline outline-none focus:shadow-md"
                   >
                     <AiFillCodeSandboxCircle className="h-8 w-8" />
-                    <div className="mb-2 mt-4 text-lg font-medium">
-                      See Work
-                    </div>
+                    <div className="mb-2 mt-4 text-lg font-medium">See Work</div>
                     <p className="text-sm leading-tight text-muted-foreground">
                       Watch all action with integrated media and tech studio.
                     </p>
-                  </Link>
+                  </a>
                 </NavigationMenuLink>
               </li>
+
               <ListItem href="/explore#process" title="Global Outsourcing">
                 Outsource tasks, projects, or business processes with integrated tech.
               </ListItem>
@@ -106,10 +106,10 @@ export function NavMenu () {
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
+
+        {/* Services Dropdown */}
         <NavigationMenuItem>
-        <Link href="/services" legacyBehavior passHref>
           <NavigationMenuTrigger>Services</NavigationMenuTrigger>
-          </Link>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
               {components.map((component) => (
@@ -124,47 +124,57 @@ export function NavMenu () {
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
+
+        {/* Media */}
         <NavigationMenuItem>
-          <Link href="/resources" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+          <NavigationMenuLink asChild>
+            <a href="/resources" className={navigationMenuTriggerStyle()}>
               Media
-            </NavigationMenuLink>
-          </Link>
+            </a>
+          </NavigationMenuLink>
         </NavigationMenuItem>
+
+        {/* Contact */}
         <NavigationMenuItem>
-          <Link href="/contact" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+          <NavigationMenuLink asChild>
+            <a href="/contact" className={navigationMenuTriggerStyle()}>
               Contact
-            </NavigationMenuLink>
-          </Link>
+            </a>
+          </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
-  )
+  );
 }
 
-const ListItem = React.forwardRef<
-  React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a">
->(({ className, title, children, ...props }, ref) => {
-  return (
-    <li>
-      <NavigationMenuLink asChild>
-        <a
-          ref={ref}
-          className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
-          )}
-          {...props}
-        >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-            {children}
-          </p>
-        </a>
-      </NavigationMenuLink>
-    </li>
-  )
-})
-ListItem.displayName = "ListItem"
+// ListItem component for dropdowns
+interface ListItemProps extends React.ComponentPropsWithoutRef<"a"> {
+  title: string;
+  href: string;
+}
+
+const ListItem = React.forwardRef<React.ElementRef<"a">, ListItemProps>(
+  ({ className, title, children, href, ...props }, ref) => {
+    return (
+      <li>
+        <NavigationMenuLink asChild>
+          <a
+            ref={ref}
+            href={href}
+            className={cn(
+              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+              className
+            )}
+            {...props}
+          >
+            <div className="text-sm font-medium leading-none">{title}</div>
+            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+              {children}
+            </p>
+          </a>
+        </NavigationMenuLink>
+      </li>
+    );
+  }
+);
+ListItem.displayName = "ListItem";
