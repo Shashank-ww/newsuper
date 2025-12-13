@@ -13,6 +13,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { AiFillCodeSandboxCircle } from "react-icons/ai";
+import Link from "next/link";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -60,17 +61,17 @@ export function NavMenu() {
         {/* Top-level Links */}
         <NavigationMenuItem>
           <NavigationMenuLink asChild>
-            <a href="/about" className={navigationMenuTriggerStyle()}>
+            <Link href="/about" className={navigationMenuTriggerStyle()}>
               About
-            </a>
+            </Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
           <NavigationMenuLink asChild>
-            <a href="/talent" className={navigationMenuTriggerStyle()}>
+            <Link href="/talent" className={navigationMenuTriggerStyle()}>
               Talent
-            </a>
+            </Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
 
@@ -81,7 +82,7 @@ export function NavMenu() {
             <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
-                  <a
+                  <Link
                     href="/"
                     className="flex h-full w-full flex-col justify-end rounded-md bg-gradient-to-b from-blue-100/50 to-yellow-50 p-6 no-underline outline-none focus:shadow-md"
                   >
@@ -90,7 +91,7 @@ export function NavMenu() {
                     <p className="text-sm leading-tight text-muted-foreground">
                       Watch all action with integrated media and tech studio.
                     </p>
-                  </a>
+                  </Link>
                 </NavigationMenuLink>
               </li>
 
@@ -128,18 +129,18 @@ export function NavMenu() {
         {/* Media */}
         <NavigationMenuItem>
           <NavigationMenuLink asChild>
-            <a href="/resources" className={navigationMenuTriggerStyle()}>
+            <Link href="/resources" className={navigationMenuTriggerStyle()}>
               Media
-            </a>
+            </Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
 
         {/* Contact */}
         <NavigationMenuItem>
           <NavigationMenuLink asChild>
-            <a href="/contact" className={navigationMenuTriggerStyle()}>
+            <Link href="/contact" className={navigationMenuTriggerStyle()}>
               Contact
-            </a>
+            </Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>
@@ -158,7 +159,7 @@ const ListItem = React.forwardRef<React.ElementRef<"a">, ListItemProps>(
     return (
       <li>
         <NavigationMenuLink asChild>
-          <a
+          <Link
             ref={ref}
             href={href}
             className={cn(
@@ -171,7 +172,7 @@ const ListItem = React.forwardRef<React.ElementRef<"a">, ListItemProps>(
             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
               {children}
             </p>
-          </a>
+          </Link>
         </NavigationMenuLink>
       </li>
     );
