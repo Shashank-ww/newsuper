@@ -9,13 +9,14 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import type { TalentFilter } from "@/data/profiles";
 
 interface Props {
-  talents: readonly string[];
-  activeTalent: string;
-  setActiveTalent: (val: string) => void;
+  talents: readonly TalentFilter[];
+  activeTalent: TalentFilter;
+  setActiveTalent: React.Dispatch<React.SetStateAction<TalentFilter>>;
   verified: boolean;
-  setVerifiedOnly: (val: boolean) => void;
+  setVerifiedOnly: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export default function FilterBar({
@@ -28,13 +29,21 @@ export default function FilterBar({
   return (
     <div className="sticky top-16 z-40 bg-white border-b border-gray-200 h-16 flex items-center px-4 gap-4 flex-wrap">
       {/* Talent Filter */}
-      <Select value={activeTalent} onValueChange={setActiveTalent}>
-        <span className="font-normal text-sm hidden md:inline">Filter Talent by Category: </span>
+      <Select
+        value={activeTalent}
+        onValueChange={(val) => setActiveTalent(val as TalentFilter)}
+      >
+        <span className="font-normal text-sm hidden md:inline">
+          Filter Talent by Category:
+        </span>
+
         <SelectTrigger className="w-[200px]">
           <SelectValue placeholder="Select talent" />
         </SelectTrigger>
+
         <SelectContent>
-          {talents.map((t) => (
+          {/* Include "All" explicitly */}
+          {["All", ...talents].map((t) => (
             <SelectItem key={t} value={t}>
               {t.replace(/([A-Z])/g, " $1").trim()}
             </SelectItem>

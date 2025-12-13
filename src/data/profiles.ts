@@ -1,5 +1,3 @@
-// src/data/profiles.ts
-
 export type TalentCategory =
   | "Developers"
   | "Designers"
@@ -8,6 +6,24 @@ export type TalentCategory =
   | "MarketingExperts"
   | "Producers"
   | "VirtualAssistant";
+
+/**
+ * Runtime array of categories
+ */
+export const TalentCategories: TalentCategory[] = [
+  "Developers",
+  "Designers",
+  "ProjectManagers",
+  "ProductManagers",
+  "MarketingExperts",
+  "Producers",
+  "VirtualAssistant",
+];
+
+/**
+ * Used for filter buttons
+ */
+export const Talents = ["All", ...TalentCategories] as const;
 
 export interface Profile {
   id: string;
@@ -21,20 +37,6 @@ export interface Profile {
   image: string;
   category: TalentCategory;
 }
-
-/**
- * Used for filter buttons
- */
-export const Talents = [
-  "All",
-  "Developers",
-  "Designers",
-  "ProjectManagers",
-  "ProductManagers",
-  "MarketingExperts",
-  "Producers",
-  "VirtualAssistant",
-] as const;
 
 /**
  * Flat, scalable profile list
@@ -167,3 +169,6 @@ export const profileData: Profile[] = [
     category: "VirtualAssistant",
   },
 ];
+
+export type TalentFilter = "All" | TalentCategory;
+
