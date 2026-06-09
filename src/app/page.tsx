@@ -41,7 +41,7 @@ export default function Home() {
           </h1>
           <h2 className="mt-4 font-medium text-accent-foreground">Professional expertise for advanced marketing</h2>
             <p className="my-4 text-md text-primary">
-              Global center for media agencies, corporate, IT hubs and healthcare groups, looking to outsource autonomous tasks and talent
+              Global center for media agencies, corporate, IT hubs and healthcare groups, looking to outsource autonomous media tasks and talent
             </p>
             <div className="mt-4 text-center md:text-left">
               <Link href={"/contact"}>

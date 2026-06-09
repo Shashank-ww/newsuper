@@ -9,7 +9,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import type { TalentFilter } from "@/data/profiles";
+import type { TalentFilter } from "@/data/fallbackProfiles";
 
 interface Props {
   talents: readonly TalentFilter[];
@@ -27,7 +27,7 @@ export default function FilterBar({
   setVerifiedOnly,
 }: Props) {
   return (
-    <div className= "py-4 sticky top-16 z-40 bg-white border-b border-gray-200 h-16">
+    <div className= "py-4 sticky top-16 bg-white border-b border-gray-200 h-16">
     <div className="flex items-center px-4 gap-4 flex-wrap">
       {/* Talent Filter */}
       <Select

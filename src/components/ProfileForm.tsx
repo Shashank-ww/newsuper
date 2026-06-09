@@ -5,7 +5,7 @@ import {
   Profile,
   TalentCategory,
   TalentCategories,
-} from "@/data/profiles";
+} from "@/data/fallbackProfiles";
 
 const ProfileForm: React.FC = () => {
   // Initial profile state

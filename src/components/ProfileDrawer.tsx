@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Profile } from "@/data/profiles";
+import { Profile } from "@/data/fallbackProfiles";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogClose } from "@/components/ui/dialog";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";

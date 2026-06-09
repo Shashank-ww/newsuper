@@ -5,10 +5,15 @@ import { Button } from "@/components/ui/button";
 import { Icons } from "@/components/ui/icons";
 import { FiZap, FiBookOpen, FiBook } from "react-icons/fi";
 import { generateSupersignal } from "@/server/supersignal";
-import { LucideClipboardCopy, LucideCopyCheck } from "lucide-react";
+import {
+  LucideClipboardCopy,
+  LucideCopyCheck,
+  Save,
+} from "lucide-react";
+import MaxWidthWrapper from "./MaxWidthWrapper";
 
 export default function SupersqadSignal() {
-  const [signal, setSignal] = useState<string>("");
+  const [signal, setSignal] = useState("");
   const [words, setWords] = useState<string[]>([]);
   const [defs, setDefs] = useState<string[]>([]);
   const [history, setHistory] = useState<string[]>([]);
@@ -17,138 +22,237 @@ export default function SupersqadSignal() {
   const [showHistory, setShowHistory] = useState(true);
   const [isPending, startTransition] = useTransition();
 
-  // Generate new supersignal
+  /* =====================
+     Generate
+  ====================== */
   const generate = () => {
     startTransition(async () => {
       const res = await generateSupersignal();
       setSignal(res.phrase);
       setWords(res.words);
       setDefs(res.defs);
-      // setShowDefs(false);
       setHistory((prev) => [res.phrase, ...prev].slice(0, 5));
     });
   };
 
-  // Copy supersignal to clipboard with branding
+  /* =====================
+     Copy
+  ====================== */
   const copy = async () => {
     if (!signal) return;
-    const textToCopy = `supersqad signals: ${signal}`;
-    await navigator.clipboard.writeText(textToCopy);
+    await navigator.clipboard.writeText(`supersqad signals: ${signal}`);
     setCopiedFlash(true);
     setTimeout(() => setCopiedFlash(false), 3000);
   };
 
-  return (
-    <section className="max-w-5xl mx-auto py-12 px-6">
-      <div className="grid md:grid-cols-2 gap-10">
-        {/* LEFT: Signal & Controls */}
-        <div className="space-y-4">
-          <p className="text-sm font-medium uppercase tracking-wide text-muted-foreground cursor-default">
-            Supersqad Signals
-          </p>
+  /* =====================
+     Save Image
+  ====================== */
+  const saveImage = () => {
+    if (!signal) return;
 
-          {/* Signal Display */}
-          <div
-            className={`relative group flex items-center gap-3 px-4 py-3 border rounded-md transition-all duration-500 ${
-              copiedFlash ? "bg-amber-100 border-sky-400" : ""
-            }`}
-          >
-            <FiZap className="text-lg" />
-            <div className="flex-1 select-all text-sm font-medium">
-              {isPending ? (
-                <span className="flex items-center gap-2 text-muted-foreground">
-                  <Icons.spinner className="h-4 w-4 animate-spin" />
-                  receiving super signals…
-                </span>
-              ) : signal ? (
-                signal
-              ) : (
-                <span className="text-muted-foreground">
-                  super.brand.signal
-                </span>
+    const canvas = document.createElement("canvas");
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    canvas.width = 1080;
+    canvas.height = 1350;
+
+    /* Background */
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    /* Left brand border */
+    ctx.fillStyle = "#0099ff";
+    ctx.fillRect(0, 0, 36, canvas.height);
+
+    const contentX = 72;
+
+    /* Logo */
+    ctx.save();
+    ctx.globalAlpha = 0.95;
+    ctx.shadowColor = "rgba(0,0,0,0.08)";
+    ctx.shadowBlur = 12;
+    ctx.translate(canvas.width - 200, 110);
+    ctx.scale(0.15, 0.15);
+
+    const gradient = ctx.createRadialGradient(
+      708.08, 303.55, 0, 708.08, 303.55, 430.34
+    );
+    gradient.addColorStop(0, "#0a99ff");
+    gradient.addColorStop(1, "#0042e9");
+
+    ctx.fillStyle = gradient;
+
+    const logoPath = new Path2D(
+      "M788.1 349.63 688.13 750.61 562.82 750.61 637.8 449.88 " +
+      "512.5 449.88 537.49 349.63 412.19 349.63 362.2 550.12 " +
+      "487.5 550.12 462.51 650.37 211.9 650.37 311.87 249.39 " +
+      "687.79 249.39 662.8 349.63 788.1 349.63 Z"
+    );
+    ctx.fill(logoPath);
+    ctx.restore();
+
+    /* Signal (auto size) */
+    const fontSize = getSignalFontSize(signal);
+    ctx.font = `600 ${fontSize}px Inter, sans-serif`;
+    ctx.fillStyle = "#020617";
+    wrapText(ctx, signal, contentX, 460, 860, fontSize + 18);
+
+    /* Label */
+    ctx.font = "bold 48px Inter, sans-serif";
+    ctx.fillText("Supersqad Signals", contentX, 180);
+
+    /* Meta */
+    ctx.font = "500 22px Inter, sans-serif";
+    ctx.fillStyle = "#94a3b8";
+    ctx.fillText(
+      `Signal #${history.length || 1} • ${new Date().toLocaleDateString()}`,
+      contentX,
+      590
+    );
+
+    /* Divider */
+    ctx.fillStyle = "#0099ff";
+    ctx.fillRect(contentX, 650, 180, 6);
+
+    /* Copy */
+    ctx.font = "400 34px Inter, sans-serif";
+    ctx.fillStyle = "#475569";
+    wrapText(
+      ctx,
+      "Signals that shape brands.\nGenerated by Supersqad.",
+      contentX,
+      720,
+      860,
+      48
+    );
+
+    /* Hashtags */
+    ctx.font = "500 30px Inter, sans-serif";
+    ctx.fillStyle = "#0099ff";
+    wrapText(
+      ctx,
+      "#Supersqad #BrandSignals #Marketing #Excellence",
+      contentX,
+      1180,
+      860,
+      42
+    );
+
+    /* Footer */
+    ctx.font = "400 26px Inter, sans-serif";
+    ctx.fillStyle = "#64748b";
+    ctx.fillText("supersqad.com", contentX, 1220);
+
+    const link = document.createElement("a");
+    link.download = "supersqad-signals.png";
+    link.href = canvas.toDataURL("image/png");
+    link.click();
+  };
+
+  return (
+    <MaxWidthWrapper>
+      <section className="py-12 px-6">
+        <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+          {/* LEFT */}
+          <div className="space-y-4">
+            <div className="flex items-center gap-3 px-4 py-3 border rounded-md">
+              <FiZap />
+              <div className="flex-1 text-sm font-medium">
+                {isPending ? (
+                  <span className="flex gap-2 items-center text-muted-foreground">
+                    <Icons.spinner className="h-4 w-4 animate-spin" />
+                    receiving super signals…
+                  </span>
+                ) : (
+                  signal || "super.brand.signal"
+                )}
+              </div>
+
+              {signal && (
+                <button onClick={copy} className="text-xs flex gap-1">
+                  {copiedFlash ? <LucideCopyCheck size={14} /> : <LucideClipboardCopy size={14} />}
+                  {copiedFlash ? "Copied" : "Copy"}
+                </button>
               )}
             </div>
 
-            {signal && (
-              <button
-                onClick={copy}
-                className="text-xs flex items-center gap-1 text-blue-600 hover:text-blue-800"
-              >
-                {copiedFlash ? (
-                  <LucideCopyCheck size={14} />
-                ) : (
-                  <LucideClipboardCopy size={14} />
-                )}
-                {copiedFlash ? "Copied" : "Copy"}
-              </button>
-            )}
-          </div>
-                                    {/* Info Tooltip
-    <span className="absolute mt-1 w-max max-w-xs text-xs text-yellow-900 bg-yellow-200 bg-opacity-80 px-2 py-1 rounded opacity-0 pointer-events-none transition-opacity duration-200 group-hover:opacity-100">
-      Your brand signals! Boost marketing with us, copy and paste this on 
-      what3words to see if it takes you anywhere.
-    </span> */}
-
-          {/* Buttons Row */}
-          <div className="flex justify-between items-center">
-            {/* Generate Button */}
-            <Button
-              size="default"
-              onClick={generate}
-              disabled={isPending}
-              className="flex items-center gap-2 bg-sky-500 hover:bg-sky-600 text-white"
-            >
-              {isPending && <Icons.spinner className="h-4 w-4 animate-spin" />}
-              {isPending ? "Generating..." : "Generate"}
+            <Button onClick={generate} disabled={isPending} className="w-full">
+              {isPending ? "Generating…" : "Generate Supersignal"}
             </Button>
 
-            {/* Show/Hide history */}
-            {history.length > 1 && (
-              <button
-                onClick={() => setShowHistory(!showHistory)}
-                className="text-xs text-blue-500 underline"
-              >
-                {showHistory ? "Hide history" : "Show history"}
-              </button>
-            )}
+            <div className="flex gap-4 text-xs">
+              {history.length > 1 && (
+                <button onClick={() => setShowHistory(!showHistory)}>
+                  {showHistory ? "Hide history" : "Show history"}
+                </button>
+              )}
+              {defs.length > 0 && (
+                <button onClick={() => setShowDefs(!showDefs)} className="flex gap-1">
+                  {showDefs ? <FiBookOpen /> : <FiBook />}
+                  Meanings
+                </button>
+              )}
+              {signal && (
+                <button onClick={saveImage} className="flex gap-1 text-emerald-600">
+                  <Save size={14} /> Save
+                </button>
+              )}
+            </div>
 
-            {/* Show/Hide meanings */}
-            {defs.length > 0 && (
-              <button
-                onClick={() => setShowDefs(!showDefs)}
-                className="text-xs flex items-center gap-1 text-muted-foreground hover:text-zinc-900"
-              >
-                {showDefs ? <FiBookOpen /> : <FiBook />}
-                {showDefs ? "Hide meanings" : "Show meanings"}
-              </button>
-            )}
+            {showHistory && history.slice(1).map((h) => (
+              <div key={h} className="text-xs text-muted-foreground">{h}</div>
+            ))}
           </div>
 
-          {/* History List */}
-          {showHistory && history.length > 1 && (
-            <div className="pt-4 text-xs text-muted-foreground space-y-1">
-              {history.slice(1).map((h) => (
-                <div key={h}>{h}</div>
+          {/* RIGHT */}
+          {showDefs && (
+            <div className="border-l pl-6 bg-gray-50 p-4 rounded text-sm">
+              {words.map((w, i) => (
+                <div key={w}>
+                  <strong>{w}</strong> — {defs[i]}
+                </div>
               ))}
             </div>
           )}
         </div>
-
-        {/* RIGHT: Definitions */}
-        {showDefs && defs.length > 0 && (
-          <div className="border-l pl-6 space-y-2 text-sm bg-gray-50 p-4 rounded">
-            {words.map((w, i) => (
-              <div key={w} className="flex items-start gap-2">
-                <span className="text-blue-500 font-bold">&bull;</span>
-                <div>
-                  <strong>{w}</strong> —{" "}
-                  <span className="text-muted-foreground">{defs[i]}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
-    </section>
+      </section>
+    </MaxWidthWrapper>
   );
+}
+
+/* =====================
+   Helpers
+====================== */
+function getSignalFontSize(text: string) {
+  if (text.length <= 18) return 64;
+  if (text.length <= 30) return 56;
+  if (text.length <= 45) return 48;
+  return 42;
+}
+
+function wrapText(
+  ctx: CanvasRenderingContext2D,
+  text: string,
+  x: number,
+  y: number,
+  maxWidth: number,
+  lineHeight: number
+) {
+  text.split("\n").forEach((line) => {
+    let current = "";
+    line.split(" ").forEach((word) => {
+      const test = current + word + " ";
+      if (ctx.measureText(test).width > maxWidth) {
+        ctx.fillText(current, x, y);
+        current = word + " ";
+        y += lineHeight;
+      } else {
+        current = test;
+      }
+    });
+    ctx.fillText(current, x, y);
+    y += lineHeight;
+  });
 }
