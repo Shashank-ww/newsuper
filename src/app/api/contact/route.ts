@@ -11,15 +11,15 @@ export async function POST(req: Request) {
     const parsedData =
       ContactSchema.parse(body);
 
-await prisma.contact.create({
-  data: {
-    name: parsedData.name,
-    email: parsedData.email,
-    contact: parsedData.contact,
-    industry: parsedData.industry,
-    message: parsedData.message,
-  },
-});
+    await prisma.contact.create({
+      data: {
+        name: parsedData.name,
+        email: parsedData.email,
+        contact: parsedData.contact,
+        industry: parsedData.industry,
+        message: parsedData.message,
+      },
+    });
 
     return NextResponse.json(
       {
