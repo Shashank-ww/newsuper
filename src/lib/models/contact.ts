@@ -11,8 +11,8 @@ async function getContacts() {
 async function createContact(
   data: { 
     name?: string; 
-    email?: string; 
-    contact?: number;
+    email: string; 
+    contact: string;
     industry?: string;
     message: string 
   }) {

@@ -2,7 +2,6 @@ import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { Button } from "@/components/ui/button";
 import Workwithus from "@/components/Workwithus";
 import Image from "next/image";
-import TalentGrid from "@/components/TalentGrid";
 
 const Talent = () => {
     return (
